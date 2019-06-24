@@ -24,6 +24,7 @@
 // // 
 namespace Aspose.Words.Cloud.Sdk.BddTests.Steps.Common
 {
+    using Aspose.Words.Cloud.Sdk.BddTests.Base.Context;
     using Aspose.Words.Cloud.Sdk.Model.Requests;
 
     using TechTalk.SpecFlow;
@@ -34,6 +35,8 @@ namespace Aspose.Words.Cloud.Sdk.BddTests.Steps.Common
     [Binding]
     public class ModifyDocumentRequestSteps
     {
+        private const string TestFolder = "DocumentActions/MailMerge/";
+
         private ICanModifyDocumentRequest Request
         {
             get { return ScenarioContext.Current["Request"] as ICanModifyDocumentRequest; }
@@ -46,7 +49,8 @@ namespace Aspose.Words.Cloud.Sdk.BddTests.Steps.Common
         [Given(@"I have specified a destFileName (.*)")]
         public void GivenIHaveSpecifiedADestFileName(string destFileName)
         {
-            this.Request.DestFileName = destFileName;
+            var remotePath = BaseContext.RemoteBaseFolder + TestFolder;
+            this.Request.DestFileName = remotePath + destFileName;
         }
     }
 }

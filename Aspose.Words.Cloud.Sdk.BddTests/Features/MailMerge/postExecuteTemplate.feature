@@ -53,4 +53,4 @@ Scenario Outline: Execute Template With Images
 
 	Examples: 
 	| TemplateName                      | Body                         | DestinationFileName                 |
-	| TestExecuteTemplateWithImages.doc | TestDataWithRemoteImages.xml | ExecuteTemplateWithImagesResult.doc |
+	| TestMailMergeWithImages.doc | TestDataWithRemoteImages.xml | ExecuteTemplateWithImagesResult.doc |
