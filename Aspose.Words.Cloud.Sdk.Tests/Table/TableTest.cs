@@ -70,7 +70,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Table
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.tableFolder) + localName));
 
-            var request = new GetTableRequest(remoteName, 1, null, this.dataFolder);
+            var request = new GetTableRequest(remoteName, null, 1, this.dataFolder);
             var actual = this.WordsApi.GetTable(request);
         }
 
@@ -86,7 +86,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Table
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.tableFolder) + localName));
 
-            var request = new DeleteTableRequest(remoteName, 1, null, this.dataFolder);
+            var request = new DeleteTableRequest(remoteName, null, 1, this.dataFolder);
             this.WordsApi.DeleteTable(request);
         }
 
@@ -119,7 +119,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Table
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.tableFolder) + localName));
 
-            var request = new GetTablePropertiesRequest(remoteName, 1, null, this.dataFolder);
+            var request = new GetTablePropertiesRequest(remoteName, null, 1, this.dataFolder);
             var actual = this.WordsApi.GetTableProperties(request);
         }
 
@@ -148,7 +148,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Table
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.tableFolder) + localName));
 
-            var request = new UpdateTablePropertiesRequest(remoteName, 1, null, this.dataFolder, properties: newProperties);
+            var request = new UpdateTablePropertiesRequest(remoteName, null, 1, this.dataFolder, properties: newProperties);
             var actual = this.WordsApi.UpdateTableProperties(request);
         }
 
@@ -329,7 +329,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Table
             var format = "png";
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.tableFolder) + localName));
 
-            var request = new RenderTableRequest(remoteName, format, index, null, this.dataFolder);
+            var request = new RenderTableRequest(remoteName, format, null, index, this.dataFolder);
             var actual = this.WordsApi.RenderTable(request);
 
             Assert.IsTrue(actual.Length > 0, "Error has occurred while table rendering");

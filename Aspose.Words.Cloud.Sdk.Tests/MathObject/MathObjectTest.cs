@@ -70,7 +70,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.MathObject
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.mathObjectFolder) + localName));
 
-            var request = new GetOfficeMathObjectRequest(remoteName, index, null, this.dataFolder);
+            var request = new GetOfficeMathObjectRequest(remoteName, null, index, this.dataFolder);
             var actual = this.WordsApi.GetOfficeMathObject(request);
         }
 
@@ -87,7 +87,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.MathObject
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.mathObjectFolder) + localName));
 
-            var request = new RenderMathObjectRequest(remoteName, "png", index, null, this.dataFolder);
+            var request = new RenderMathObjectRequest(remoteName, "png", null, index, this.dataFolder);
             var actual = this.WordsApi.RenderMathObject(request);
 
             Assert.IsTrue(actual.Length > 0, "Error has occurred while mathObject rendering");
@@ -106,7 +106,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.MathObject
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.mathObjectFolder) + localName));
 
-            var request = new DeleteOfficeMathObjectRequest(remoteName, index, null, this.dataFolder);
+            var request = new DeleteOfficeMathObjectRequest(remoteName, null, index, this.dataFolder);
             this.WordsApi.DeleteOfficeMathObject(request);
         }
     }

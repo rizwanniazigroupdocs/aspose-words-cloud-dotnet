@@ -73,7 +73,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Field
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.fieldFolder) + localName));
 
-            var request = new GetFieldRequest(remoteName, fieldIndex, "sections/0/paragraphs/0", this.dataFolder);
+            var request = new GetFieldRequest(remoteName, "sections/0/paragraphs/0", fieldIndex, this.dataFolder);
             var actual = this.WordsApi.GetField(request);
         }
 
@@ -109,7 +109,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Field
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.fieldFolder) + localName));
 
-            var request = new UpdateFieldRequest(remoteName, body, fieldIndex, "sections/0/paragraphs/0", this.dataFolder, destFileName: destFileName);
+            var request = new UpdateFieldRequest(remoteName, body, "sections/0/paragraphs/0", fieldIndex, this.dataFolder, destFileName: destFileName);
             var actual = this.WordsApi.UpdateField(request);
         }
 
@@ -144,7 +144,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Field
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.fieldFolder) + localName));
 
-            var request = new DeleteFieldRequest(remoteName,  fieldIndex, "sections/0/paragraphs/0", this.dataFolder);
+            var request = new DeleteFieldRequest(remoteName, "sections/0/paragraphs/0", fieldIndex, this.dataFolder);
             this.WordsApi.DeleteField(request);
         }
 

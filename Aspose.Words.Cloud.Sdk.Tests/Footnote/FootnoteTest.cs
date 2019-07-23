@@ -72,7 +72,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Footnote
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.footnoteFolder) + localName));
 
-            var request = new DeleteFootnoteRequest(remoteName, index, null, this.dataFolder);
+            var request = new DeleteFootnoteRequest(remoteName, null, index, this.dataFolder);
             this.WordsApi.DeleteFootnote(request);
         }
 
@@ -105,7 +105,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Footnote
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.footnoteFolder) + localName));
 
-            var request = new GetFootnoteRequest(remoteName, index, null, this.dataFolder);
+            var request = new GetFootnoteRequest(remoteName, null, index, this.dataFolder);
             var actual = this.WordsApi.GetFootnote(request);
         }
 
@@ -123,7 +123,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Footnote
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.footnoteFolder) + localName));
 
-            var request = new UpdateFootnoteRequest(remoteName, footnote, index, null, this.dataFolder);
+            var request = new UpdateFootnoteRequest(remoteName, footnote, null, index, this.dataFolder);
             var actual = this.WordsApi.UpdateFootnote(request);
         }
     }

@@ -55,7 +55,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Paragraph
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(BaseTestContext.CommonFolder) + localName));
 
-            var request = new GetParagraphRequest(remoteName, index, "sections/0", this.dataFolder);
+            var request = new GetParagraphRequest(remoteName, "sections/0", index, this.dataFolder);
             var actual = this.WordsApi.GetParagraph(request);
         }
 
@@ -88,7 +88,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Paragraph
 
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(BaseTestContext.CommonFolder) + localName));
 
-            var request = new GetParagraphRequest(remoteName, index, null, this.dataFolder);
+            var request = new GetParagraphRequest(remoteName, null, index, this.dataFolder);
             var actual = this.WordsApi.GetParagraph(request);
         }
 
@@ -191,7 +191,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Paragraph
             var format = "png";
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(BaseTestContext.CommonFolder) + localName));
 
-            var request = new RenderParagraphRequest(remoteName, format, index, null, this.dataFolder);
+            var request = new RenderParagraphRequest(remoteName, format, null, index, this.dataFolder);
             var actual = this.WordsApi.RenderParagraph(request);
 
             Assert.IsTrue(actual.Length > 0, "Error has occurred while paragraph rendering");
@@ -210,7 +210,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Paragraph
             
             this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(BaseTestContext.CommonFolder) + localName));
             
-            var request = new GetParagraphFormatRequest(remoteName, 0, null, this.dataFolder);
+            var request = new GetParagraphFormatRequest(remoteName, null, 0, this.dataFolder);
             var actual = this.WordsApi.GetParagraphFormat(request);
         }
 
