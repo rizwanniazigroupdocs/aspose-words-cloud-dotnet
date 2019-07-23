@@ -60,6 +60,23 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Paragraph
         }
 
         /// <summary>
+        /// Test for getting paragraph without node path
+        /// </summary>
+        [Test]
+        public void TestGetDocumentParagraphByIndexWithoutNodePath()
+        {
+            var localName = "test_multi_pages.docx";
+            var remoteName = "TestGetDocumentParagraphByIndexWithoutNodePath.docx";
+            var fullName = Path.Combine(this.dataFolder, remoteName);
+            var index = 0;
+
+            this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(BaseTestContext.CommonFolder) + localName));
+
+            var request = new GetParagraphWithoutNodePathRequest(remoteName, index, this.dataFolder);
+            var actual = this.WordsApi.GetParagraphWithoutNodePath(request);
+        }
+
+        /// <summary>
         /// Test for getting all paragraphs
         /// </summary>
         [Test]
@@ -73,6 +90,22 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Paragraph
 
             var request = new GetParagraphsRequest(remoteName, "sections/0", this.dataFolder);
             var actual = this.WordsApi.GetParagraphs(request);
+        }
+
+        /// <summary>
+        /// Test for getting all paragraphs without node path
+        /// </summary>
+        [Test]
+        public void TestGetDocumentParagraphsWithoutNodePath()
+        {
+            var localName = "test_multi_pages.docx";
+            var remoteName = "TestGetDocumentParagraphsWithoutNodePathWithoutNodePath.docx";
+            var fullName = Path.Combine(this.dataFolder, remoteName);
+
+            this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(BaseTestContext.CommonFolder) + localName));
+
+            var request = new GetParagraphsWithoutNodePathRequest(remoteName, this.dataFolder);
+            var actual = this.WordsApi.GetParagraphsWithoutNodePath(request);
         }
 
         /// <summary>
@@ -179,6 +212,23 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Paragraph
         }
 
         /// <summary>
+        /// Test for adding paragraph without node path
+        /// </summary>
+        [Test]
+        public void TestInsertParagraphWithoutNodePath()
+        {
+            var localName = "test_multi_pages.docx";
+            var remoteName = "TestInsertParagraphWithoutNodePath.docx";
+            var fullName = Path.Combine(this.dataFolder, remoteName);
+            var paragraph = new ParagraphInsert { Text = "This is a new paragraph for your document" };
+
+            this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(BaseTestContext.CommonFolder) + localName));
+
+            var request = new InsertParagraphWithoutNodePathRequest(remoteName, paragraph, this.dataFolder);
+            var actual = this.WordsApi.InsertParagraphWithoutNodePath(request);
+        }
+
+        /// <summary>
         /// Test for paragraph rendering
         /// </summary>
         [Test]
@@ -193,6 +243,25 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Paragraph
 
             var request = new RenderParagraphRequest(remoteName, format, null, index, this.dataFolder);
             var actual = this.WordsApi.RenderParagraph(request);
+
+            Assert.IsTrue(actual.Length > 0, "Error has occurred while paragraph rendering");
+        }
+
+        /// <summary>
+        /// Test for paragraph rendering without node path
+        /// </summary>
+        [Test]
+        public void TestRenderParagraphWithoutNodePath()
+        {
+            var localName = "test_multi_pages.docx";
+            var remoteName = "TestRenderParagraphWithoutNodePath.docx";
+            var fullName = Path.Combine(this.dataFolder, remoteName);
+            var index = 0;
+            var format = "png";
+            this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(BaseTestContext.CommonFolder) + localName));
+
+            var request = new RenderParagraphWithoutNodePathRequest(remoteName, format, index, this.dataFolder);
+            var actual = this.WordsApi.RenderParagraphWithoutNodePath(request);
 
             Assert.IsTrue(actual.Length > 0, "Error has occurred while paragraph rendering");
         }
@@ -215,6 +284,22 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Paragraph
         }
 
         /// <summary>
+        /// Test for getting paragraph format settings without node path
+        /// </summary>
+        [Test]
+        public void TestGetParagraphFormatWithoutNodePath()
+        {
+            var localName = "test_multi_pages.docx";
+            var remoteName = "TestGetDocumentParagraphsWithoutNodePath.docx";
+            var fullName = Path.Combine(this.dataFolder, remoteName);
+
+            this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(BaseTestContext.CommonFolder) + localName));
+
+            var request = new GetParagraphFormatWithoutNodePathRequest(remoteName, 0, this.dataFolder);
+            var actual = this.WordsApi.GetParagraphFormatWithoutNodePath(request);
+        }
+
+        /// <summary>
         /// Test for updating  paragraph format settings
         /// </summary>
         [Test]
@@ -233,6 +318,39 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Paragraph
 
             var request = new UpdateParagraphFormatRequest(remoteName, body, string.Empty, 0, this.dataFolder);
             var actual = this.WordsApi.UpdateParagraphFormat(request);
+        }
+
+        /// <summary>
+        /// Test for deleting  a paragraph 
+        /// </summary>
+        [Test]
+        public void TestDeleteParagraph()
+        {
+            var localName = "test_multi_pages.docx";
+            var remoteName = "TestGetDocumentParagraphs.docx";
+            var fullName = Path.Combine(this.dataFolder, remoteName);
+
+            this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(BaseTestContext.CommonFolder) + localName));
+
+            var request = new DeleteParagraphRequest(remoteName, null, 0, this.dataFolder);
+            this.WordsApi.DeleteParagraph(request);
+        }
+
+
+        /// <summary>
+        /// Test for deleting  a paragraph without node path
+        /// </summary>
+        [Test]
+        public void TestDeleteParagraphWithoutNodePath()
+        {
+            var localName = "test_multi_pages.docx";
+            var remoteName = "TestGetDocumentParagraphsWithoutNodePath.docx";
+            var fullName = Path.Combine(this.dataFolder, remoteName);
+
+            this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(BaseTestContext.CommonFolder) + localName));
+
+            var request = new DeleteParagraphWithoutNodePathRequest(remoteName, 0, this.dataFolder);
+            this.WordsApi.DeleteParagraphWithoutNodePath(request);
         }
     }
 }

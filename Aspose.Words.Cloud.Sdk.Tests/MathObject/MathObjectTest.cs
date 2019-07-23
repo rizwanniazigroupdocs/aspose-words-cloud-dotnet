@@ -58,6 +58,22 @@ namespace Aspose.Words.Cloud.Sdk.Tests.MathObject
         }
 
         /// <summary>
+        /// Test for getting mathObjects without node path
+        /// </summary>
+        [Test]
+        public void TestGetOfficeMathObjectsWithoutNodePath()
+        {
+            var localName = "MathObjects.docx";
+            var remoteName = "TestGetOfficeMathObjectsWithoutNodePath.docx";
+            var fullName = Path.Combine(this.dataFolder, remoteName);
+
+            this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.mathObjectFolder) + localName));
+
+            var request = new GetOfficeMathObjectsWithoutNodePathRequest(remoteName, this.dataFolder);
+            var actual = this.WordsApi.GetOfficeMathObjectsWithoutNodePath(request);
+        }
+
+        /// <summary>
         /// Test for getting mathObject
         /// </summary>
         [Test]
@@ -72,6 +88,23 @@ namespace Aspose.Words.Cloud.Sdk.Tests.MathObject
 
             var request = new GetOfficeMathObjectRequest(remoteName, null, index, this.dataFolder);
             var actual = this.WordsApi.GetOfficeMathObject(request);
+        }
+
+        /// <summary>
+        /// Test for getting mathObject without node path
+        /// </summary>
+        [Test]
+        public void TestGetOfficeMathObjectWithoutNodePath()
+        {
+            var localName = "MathObjects.docx";
+            var remoteName = "TestGetOfficeMathObjectWithoutNodePath.docx";
+            var fullName = Path.Combine(this.dataFolder, remoteName);
+            var index = 0;
+
+            this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.mathObjectFolder) + localName));
+
+            var request = new GetOfficeMathObjectWithoutNodePathRequest(remoteName, index, this.dataFolder);
+            var actual = this.WordsApi.GetOfficeMathObjectWithoutNodePath(request);
         }
 
         /// <summary>
@@ -94,6 +127,25 @@ namespace Aspose.Words.Cloud.Sdk.Tests.MathObject
         }
 
         /// <summary>
+        /// Test for rendering mathObject without node path
+        /// </summary>
+        [Test]
+        public void TestRenderMathObjectWithoutNodePath()
+        {
+            var localName = "MathObjects.docx";
+            var remoteName = "TestRenderMathObjectWithoutNodePath.docx";
+            var fullName = Path.Combine(this.dataFolder, remoteName);
+            var index = 0;
+
+            this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.mathObjectFolder) + localName));
+
+            var request = new RenderMathObjectWithoutNodePathRequest(remoteName, "png", index, this.dataFolder);
+            var actual = this.WordsApi.RenderMathObjectWithoutNodePath(request);
+
+            Assert.IsTrue(actual.Length > 0, "Error has occurred while mathObject rendering");
+        }
+
+        /// <summary>
         /// Test for deleting mathObject
         /// </summary>
         [Test]
@@ -108,6 +160,23 @@ namespace Aspose.Words.Cloud.Sdk.Tests.MathObject
 
             var request = new DeleteOfficeMathObjectRequest(remoteName, null, index, this.dataFolder);
             this.WordsApi.DeleteOfficeMathObject(request);
+        }
+
+        /// <summary>
+        /// Test for deleting mathObject without node path
+        /// </summary>
+        [Test]
+        public void TestDeleteMathObjectWithoutNodePath()
+        {
+            var localName = "MathObjects.docx";
+            var remoteName = "TestDeleteMathObjectWithoutNodePath.docx";
+            var fullName = Path.Combine(this.dataFolder, remoteName);
+            var index = 0;
+
+            this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.mathObjectFolder) + localName));
+
+            var request = new DeleteOfficeMathObjectWithoutNodePathRequest(remoteName, index, this.dataFolder);
+            this.WordsApi.DeleteOfficeMathObjectWithoutNodePath(request);
         }
     }
 }
