@@ -2282,18 +2282,12 @@ namespace Aspose.Words.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "loadEncoding", request.LoadEncoding);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             
-            var response = this.apiInvoker.InvokeApi(
+            return this.apiInvoker.InvokeBinaryApi(
                 resourcePath, 
                "GET", 
                 null, 
                 null, 
                 null);
-            if (response != null)
-            {
-                return (System.IO.Stream)SerializationHelper.Deserialize(response, typeof(System.IO.Stream));
-            }
-                    
-            return null;
         }
 
         /// <summary>
@@ -2369,18 +2363,12 @@ namespace Aspose.Words.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "loadEncoding", request.LoadEncoding);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             
-            var response = this.apiInvoker.InvokeApi(
+            return this.apiInvoker.InvokeBinaryApi(
                 resourcePath, 
                "GET", 
                 null, 
                 null, 
                 null);
-            if (response != null)
-            {
-                return (System.IO.Stream)SerializationHelper.Deserialize(response, typeof(System.IO.Stream));
-            }
-                    
-            return null;
         }
 
         /// <summary>
@@ -6071,18 +6059,12 @@ namespace Aspose.Words.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsLocation", request.FontsLocation);
             
-            var response = this.apiInvoker.InvokeApi(
+            return this.apiInvoker.InvokeBinaryApi(
                 resourcePath, 
                "GET", 
                 null, 
                 null, 
                 null);
-            if (response != null)
-            {
-                return (System.IO.Stream)SerializationHelper.Deserialize(response, typeof(System.IO.Stream));
-            }
-                    
-            return null;
         }
 
         /// <summary>
@@ -6168,18 +6150,12 @@ namespace Aspose.Words.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsLocation", request.FontsLocation);
             
-            var response = this.apiInvoker.InvokeApi(
+            return this.apiInvoker.InvokeBinaryApi(
                 resourcePath, 
                "GET", 
                 null, 
                 null, 
                 null);
-            if (response != null)
-            {
-                return (System.IO.Stream)SerializationHelper.Deserialize(response, typeof(System.IO.Stream));
-            }
-                    
-            return null;
         }
 
         /// <summary>
@@ -6307,18 +6283,12 @@ namespace Aspose.Words.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsLocation", request.FontsLocation);
             
-            var response = this.apiInvoker.InvokeApi(
+           return this.apiInvoker.InvokeBinaryApi(
                 resourcePath, 
                "GET", 
                 null, 
                 null, 
                 null);
-            if (response != null)
-            {
-                return (System.IO.Stream)SerializationHelper.Deserialize(response, typeof(System.IO.Stream));
-            }
-                    
-            return null;
         }
 
         /// <summary>
@@ -6404,18 +6374,12 @@ namespace Aspose.Words.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsLocation", request.FontsLocation);
             
-            var response = this.apiInvoker.InvokeApi(
+            return this.apiInvoker.InvokeBinaryApi(
                 resourcePath, 
                "GET", 
                 null, 
                 null, 
                 null);
-            if (response != null)
-            {
-                return (System.IO.Stream)SerializationHelper.Deserialize(response, typeof(System.IO.Stream));
-            }
-                    
-            return null;
         }
 
         /// <summary>
