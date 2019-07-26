@@ -121,5 +121,7 @@ SDKs/servercreds.json
 /BuildOut/
 
 #nuget package related files
+package/*
+packages/*
 *.pfx
 *.snk
