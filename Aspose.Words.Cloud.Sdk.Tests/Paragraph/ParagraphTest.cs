@@ -212,23 +212,6 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Paragraph
         }
 
         /// <summary>
-        /// Test for adding paragraph without node path
-        /// </summary>
-        [Test]
-        public void TestInsertParagraphWithoutNodePath()
-        {
-            var localName = "test_multi_pages.docx";
-            var remoteName = "TestInsertParagraphWithoutNodePath.docx";
-            var fullName = Path.Combine(this.dataFolder, remoteName);
-            var paragraph = new ParagraphInsert { Text = "This is a new paragraph for your document" };
-
-            this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(BaseTestContext.CommonFolder) + localName));
-
-            var request = new InsertParagraphWithoutNodePathRequest(remoteName, paragraph, this.dataFolder);
-            var actual = this.WordsApi.InsertParagraphWithoutNodePath(request);
-        }
-
-        /// <summary>
         /// Test for paragraph rendering
         /// </summary>
         [Test]

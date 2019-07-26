@@ -164,25 +164,6 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Field
         }
 
         /// <summary>
-        /// Test for posting field without node path
-        /// </summary>
-        [Test]
-        public void TestUpdateFieldWithoutNodePath()
-        {
-            var localName = "GetField.docx";
-            var remoteName = "TestUpdateFieldWithoutNodePath.docx";
-            var fullName = Path.Combine(this.dataFolder, remoteName);
-            var fieldIndex = 0;
-            var destFileName = Path.Combine(BaseTestOutPath, remoteName);
-            var body = new Field { Result = "3", FieldCode = "{ NUMPAGES }", NodeId = "0.0.3" };
-
-            this.UploadFileToStorage(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir(this.fieldFolder) + localName));
-
-            var request = new UpdateFieldWithoutNodePathRequest(remoteName, body, fieldIndex, this.dataFolder, destFileName: destFileName);
-            var actual = this.WordsApi.UpdateFieldWithoutNodePath(request);
-        }
-
-        /// <summary>
         /// Test for inserting page numbers field
         /// </summary>
         [Test]
