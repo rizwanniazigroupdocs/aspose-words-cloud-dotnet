@@ -16,7 +16,7 @@ c:\\build\tools\signtool.exe verify /pa c:\Build\Aspose.Words.Cloud.Sdk\bin\Rele
 mkdir c:\Build\package\lib\net2 -p || goto end
 copy c:\Build\Aspose.Words.Cloud.Sdk\bin\Release\Aspose.Words.Cloud.Sdk.dll c:\Build\package\lib\net2\ || goto end
 copy c:\Build\Aspose.Words.Cloud.Sdk\Aspose.Words.Cloud.Sdk.Net.nuspec c:\Build\package\ || goto end
-c:\Build\.nuget\NuGet.exe" pack c:\Build\package\Aspose.Words.Cloud.Sdk.Net.nuspec || goto end
+c:\Build\.nuget\NuGet.exe" pack c:\Build\package\Aspose.Words.Cloud.Sdk.Net.nuspec  -properties version=%SDK_VERSION% || goto end
 
 :Replace the nuget package with a new version
 for %%f in (c:\Build\*.nupkg) do c:\Build\.nuget\NuGet.exe add %%~f -Source c:\Build\packages || goto end
