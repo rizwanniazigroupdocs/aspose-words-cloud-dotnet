@@ -146,7 +146,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Range
             var newDocName = Path.Combine(this.remoteDataFolder, "NewDoc.docx");
             var rangeDoc = new RangeDocument { DocumentName = newDocName };
             var request = new SaveAsRangeRequest(remoteName, rangeStart, rangeDoc, rangeEnd, this.remoteDataFolder);
-            var rangeTextResponse = this.WordsApi.SaveAsRange(request);
+            this.WordsApi.SaveAsRange(request);
 
             var result = this.WordsApi.DownloadFile(new DownloadFileRequest(newDocName));
             Assert.IsNotNull(result, "Cannot download document from storage");
@@ -170,7 +170,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Range
             var newDocName = Path.Combine(this.remoteDataFolder, "NewDoc2.docx");
             var rangeDoc = new RangeDocument { DocumentName = newDocName };
             var request = new SaveAsRange2Request(remoteName, rangeStart, rangeDoc, this.remoteDataFolder);
-            var rangeTextResponse = this.WordsApi.SaveAsRange2(request);
+            this.WordsApi.SaveAsRange2(request);
 
             var result = this.WordsApi.DownloadFile(new DownloadFileRequest(newDocName));
             Assert.IsNotNull(result, "Cannot download document from storage");
@@ -195,7 +195,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Range
             var newText = "Replaced header";
             var replacement = new ReplaceRange { Text = newText };
             var request = new ReplaceWithTextRequest(remoteName, rangeStart, replacement, rangeEnd, this.remoteDataFolder);
-            var rangeTextResponse = this.WordsApi.ReplaceWithText(request);
+            this.WordsApi.ReplaceWithText(request);
         }
 
         /// <summary>
@@ -216,7 +216,7 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Range
             var newText = "Replaced header";
             var replacement = new ReplaceRange { Text = newText };
             var request = new ReplaceWithText2Request(remoteName, rangeStart, replacement, this.remoteDataFolder);
-            var rangeTextResponse = this.WordsApi.ReplaceWithText2(request);
+            this.WordsApi.ReplaceWithText2(request);
         }
     }
 }
