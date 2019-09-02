@@ -42,7 +42,7 @@ tests:
     - mkdir testResults 
     - mkdir Settings
     - 'echo "{""AppSid"":""$env:AppSid"",""AppKey"":""$env:AppKey"",""BaseUrl"":""$env:TestServerUrl"" }" > Settings/servercreds.json'
-    - dotnet restore
+    - dotnet restore Aspose.Words.Cloud.Sdk.Tests\Aspose.Words.Cloud.Sdk.Tests.csproj
     - tools\nunit\nunit3-console.exe buildOut\Aspose.Words.Cloud.Sdk.Tests.dll  --result="testResults\tests-result.xml;transform=tools\nunit\nunit3-junit.xslt"
   artifacts:
     paths:       
