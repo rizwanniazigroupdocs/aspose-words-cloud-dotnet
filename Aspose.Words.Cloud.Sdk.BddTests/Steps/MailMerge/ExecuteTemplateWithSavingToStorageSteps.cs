@@ -100,7 +100,17 @@ namespace Aspose.Words.Cloud.Sdk.BddTests.Steps.MailMerge
         {
             this.Request.Data = File.ReadAllText(Path.Combine(this.context.TestDataPath, TestFolder, bodyDocumentName));
         }
-        
+
+        /// <summary>
+        /// Initialize destination file name
+        /// </summary>
+        /// <param name="destFileName">destination file name</param>
+        [Given(@"I have specified a destFileName (.*)")]
+        public void GivenIHaveSpecifiedADestFileName(string destFileName)
+        {
+            this.Request.DestFileName = Path.Combine(BaseContext.RemoteBaseFolder + TestFolder, destFileName);
+        }
+
         /// <summary>
         /// Executes template from storage
         /// </summary>
