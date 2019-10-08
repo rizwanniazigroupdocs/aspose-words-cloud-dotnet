@@ -27,7 +27,7 @@ node('words-windows') {
 			}
 			
 			try {
-				bat 'tools\\nunit\nunit3-console.exe buildOut\Aspose.Words.Cloud.Sdk.BddTests.dll --result="testResults\\bddtests-result.xml;transform=tools\\nunit\\nunit3-junit.xslt"'
+				bat 'tools\\nunit\\nunit3-console.exe buildOut\\Aspose.Words.Cloud.Sdk.BddTests.dll --result="testResults\\bddtests-result.xml;transform=tools\\nunit\\nunit3-junit.xslt"'
 			} finally {
 				junit 'testResults\\bddtests-result.xml'
 			}
