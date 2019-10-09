@@ -14,7 +14,7 @@ node('words-windows') {
 		
 		stage('tests') {	
 			bat 'mkdir testResults'
-			bar 'mkdir Settings'
+			bat 'mkdir Settings'
 			withCredentials([usernamePassword(credentialsId: '6839cbe8-39fa-40c0-86ce-90706f0bae5d', passwordVariable: 'AppKey', usernameVariable: 'AppSid')]) {
 				bat "echo {\"AppSid\":\"%AppSid%\",\"AppKey\":\"%AppKey%\" } > Settings\\servercreds.json"
 			}
@@ -31,7 +31,8 @@ node('words-windows') {
 				junit 'testResults\\bddtests-result.xml'
 			}
 		}
-	} finally {                       
+	} finally {
+		bat 'docker system prune'
 		deleteDir()
 	}
 }
