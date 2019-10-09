@@ -9,7 +9,7 @@ node('words-windows') {
 		}
 		stage('build') {
 			bat 'docker build scripts -f scripts\\build.Dockerfile -t netsdkbuild'
-			bat 'docker run -v "%CD%:C:\\Build\\" netsdkbuild c:\\build\\scripts\\build.bat' 
+			bat 'docker run -v %CD%:C:\\Build\\ netsdkbuild c:\\build\\scripts\\build.bat' 
 		}
 		
 		stage('tests') {	
