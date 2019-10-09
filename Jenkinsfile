@@ -5,8 +5,8 @@ properties([
 node('words-windows') {
 	try {
 		stage('build') {
-			bat 'docker build scripts -f scripts\build.Dockerfile -t netsdkbuild'
-			bat 'docker run -v "%CD%:C:\Build\" netsdkbuild c:\build\scripts\build.bat' 
+			bat 'docker build scripts -f scripts\\build.Dockerfile -t netsdkbuild'
+			bat 'docker run -v "%CD%:C:\\Build\\" netsdkbuild c:\\build\\scripts\\build.bat' 
 		}
 		
 		stage('tests') {	
@@ -17,15 +17,15 @@ node('words-windows') {
 			}
 			
 			try {
-				bat 'tools\nunit\nunit3-console.exe buildOut\\Aspose.Words.Cloud.Sdk.Tests.dll  --result="testResults\tests-result.xml;transform=tools\nunit\nunit3-junit.xslt"'
+				bat 'tools\\nunit\\nunit3-console.exe buildOut\\Aspose.Words.Cloud.Sdk.Tests.dll  --result="testResults\\tests-result.xml;transform=tools\\nunit\\nunit3-junit.xslt"'
 			} finally {
-				junit 'testResults\tests-result.xml'
+				junit 'testResults\\tests-result.xml'
 			}
 			
 			try {
-				bat 'tools\nunit\nunit3-console.exe buildOut\Aspose.Words.Cloud.Sdk.BddTests.dll --result="testResults\bddtests-result.xml;transform=tools\nunit\nunit3-junit.xslt"'
+				bat 'tools\\nunit\\nunit3-console.exe buildOut\\Aspose.Words.Cloud.Sdk.BddTests.dll --result="testResults\\bddtests-result.xml;transform=tools\\nunit\\nunit3-junit.xslt"'
 			} finally {
-				junit 'testResults\bddtests-result.xml'
+				junit 'testResults\\bddtests-result.xml'
 			}
 		}
 	} finally {                       
