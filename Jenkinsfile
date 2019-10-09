@@ -5,7 +5,9 @@ properties([
 node('words-windows') {
 	try {
 		stage('checkout'){
-			checkout([$class: 'GitSCM', branches: [[name: '*/' + params.branch]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '361885ba-9425-4230-950e-0af201d90547', url: 'https://git.auckland.dynabic.com/words-cloud/words-cloud-node.git']]])
+			final localBranch = params.branch.substring(params.branch.lastIndexOf('/') + 1, params.branch.length())
+			
+			checkout([$class: 'GitSCM', branches: [[name: localBranch]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'LocalBranch', localBranch: "**"]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '361885ba-9425-4230-950e-0af201d90547', url: 'https://git.auckland.dynabic.com/words-cloud/words-cloud-node.git']]])
 		}
 		
 		stage('build') {
