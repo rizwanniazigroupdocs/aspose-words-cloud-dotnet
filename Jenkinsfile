@@ -4,10 +4,6 @@ properties([
 
 node('words-windows') {
 	try {
-		stage('checkout'){
-			checkout([$class: 'GitSCM', branches: [[name: params.branch]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '361885ba-9425-4230-950e-0af201d90547', url: 'https://git.auckland.dynabic.com/words-cloud/words-cloud-node.git']]])
-		}
-		
 		stage('build') {
 			bat 'docker build .\\scripts -f .\\scripts\\build.Dockerfile -t netsdkbuild'
 			bat 'docker run -v "${PWD}:C:\\Build\\" netsdkbuild c:\\build\\scripts\\build.bat' 
