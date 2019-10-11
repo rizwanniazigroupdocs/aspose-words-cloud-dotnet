@@ -64,7 +64,7 @@ node('words-windows') {
 			bat "git remote set-url origin ${gitRepoUrl}"
 			bat 'git checkout testPackage'
 			bat 'git reset --hard origin/testPackage'
-			bat "git tag -a ${SDK_VERSION} -m \"version ${SDK_VERSION}\""
+			bat "git tag -a ${SDK_VERSION} -m 'version ${SDK_VERSION}'"
 			bat "git push ${gitRepoUrl} ${SDK_VERSION}'
 		}
 	} finally {
