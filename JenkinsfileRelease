@@ -20,8 +20,8 @@ node('words-windows') {
 		
 		stage('test the package') {
 			withCredentials([usernamePassword(credentialsId: '361885ba-9425-4230-950e-0af201d90547', usernameVariable: 'gitUsername', passwordVariable: 'gitPass')]) {
-				gitRepoUrl = "https://%gitUsername%:%gitPass%@git.auckland.dynabic.com/words-cloud/words-cloud-node.git"
-				source = "WORDSCLOUD-896"
+				env.gitRepoUrl = "https://%gitUsername%:%gitPass%@git.auckland.dynabic.com/words-cloud/words-cloud-node.git"
+				env.source = "WORDSCLOUD-896"
 			}
 			
 			bat "git checkout %source%"
@@ -64,7 +64,7 @@ node('words-windows') {
 		
 		stage('add version tag') {
 			withCredentials([usernamePassword(credentialsId: '361885ba-9425-4230-950e-0af201d90547', usernameVariable: 'gitUsername', passwordVariable: 'gitPass')]) {
-				gitRepoUrl = "https://%gitUsername%:%gitPass%@git.auckland.dynabic.com/words-cloud/words-cloud-node.git"
+				env.gitRepoUrl = "https://%gitUsername%:%gitPass%@git.auckland.dynabic.com/words-cloud/words-cloud-node.git"
 			}
 			bat "git remote set-url origin %gitRepoUrl%"
 			bat 'git checkout testPackage'
