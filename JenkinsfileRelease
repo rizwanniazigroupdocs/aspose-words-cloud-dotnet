@@ -12,7 +12,7 @@ node('words-windows') {
 			}			
 			
 			powershell 'docker build .\\scripts -f .\\scripts\\build.Dockerfile -t netsdkbuild'
-			powershell 'docker run -v "${PWD}:C:/Build/" -e SDK_VERSION=$env:SDK_VERSION netsdkbuild c:\build\scripts\build-release.bat'     
+			powershell 'docker run -v "${PWD}:C:/Build/" -e SDK_VERSION=$env:SDK_VERSION netsdkbuild c:\\build\\scripts\\build-release.bat'     
 		}
 		
 		stage('test the package') {
