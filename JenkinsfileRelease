@@ -65,7 +65,7 @@ node('words-windows') {
 			bat 'git checkout testPackage'
 			bat 'git reset --hard origin/testPackage'
 			bat "git tag -a ${SDK_VERSION} -m 'version ${SDK_VERSION}'"
-			bat "git push ${gitRepoUrl} ${SDK_VERSION}'
+			bat "git push ${gitRepoUrl} ${SDK_VERSION}"
 		}
 	} finally {
 		deleteDir()
