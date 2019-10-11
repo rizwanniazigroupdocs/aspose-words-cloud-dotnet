@@ -1,5 +1,5 @@
 properties([
-	parameters([string(defaultValue:  'refs/heads/master', description: 'the branch to build', name: 'branch', trim: true)])
+	parameters([string(defaultValue: 'refs/heads/master', description: 'the branch to build', name: 'branch', trim: true)])
 ])
 
 node('words-windows') {
