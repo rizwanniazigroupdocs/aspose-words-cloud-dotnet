@@ -32,7 +32,7 @@ node('words-windows') {
 			}
 		}
 	} finally {
-		bat 'docker system prune'
+		bat 'docker system prune -f'
 		deleteDir()
 	}
 }

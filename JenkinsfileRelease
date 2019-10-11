@@ -1,0 +1,73 @@
+node('words-windows') {
+	try {
+		stage('build'){
+			env.SDK_VERSION = powershell(returnStdout: true, script:'echo ((ConvertFrom-Json -InputObject (New-Object System.Net.WebClient).DownloadString("https://api.aspose.cloud/v4.0/words/swagger/spec")).info.version | Select-String -Pattern "^\\d+\\.\\d+" ).Matches[0].Value')
+			
+			withCredentials([file(credentialsId: 'pfxFile', variable: 'pfxFilePath')]) {
+				bat "copy ${pfxFilePath} scripts\\aspose.pfx"
+			}
+			
+			withCredentials([file(credentialsId: 'snkFile', variable: 'snkFilePath')]) {
+				bat "copy ${snkFilePath} scripts\\aspose.snk"
+			}			
+			
+			powershell 'docker build .\\scripts -f .\\scripts\\build.Dockerfile -t netsdkbuild'
+			powershell 'docker run -v "${PWD}:C:/Build/" -e SDK_VERSION=$env:SDK_VERSION netsdkbuild c:\build\scripts\build-release.bat'     
+		}
+		
+		stage('test the package') {
+			withCredentials([usernamePassword(credentialsId: '361885ba-9425-4230-950e-0af201d90547', usernameVariable: 'gitUsername', passwordVariable: 'gitPass')]) {
+				gitRepoUrl = "https://${gitUsername}:${gitPass}@git.auckland.dynabic.com/words-cloud/words-cloud-node.git"
+				source = "WORDSCLOUD-896"
+			}
+			
+			bat "git checkout ${source}"
+			bat "git remote set-url origin ${ORIGIN}"
+			bat 'git checkout testPackage'
+			bat 'git reset --hard origin/testPackage'
+			bat "git merge --no-ff --allow-unrelated-histories origin/${source}"
+			bat 'git diff --name-status'
+			bat 'git push'
+		}
+	} finally {
+		bat 'docker system prune -f'
+		deleteDir()
+	}
+}
+
+stage('test package'){
+	build job: 'words-net-sdk', 
+	   parameters: [
+		string(name: 'branch', value: 'testPackage')						
+	   ]
+}
+
+
+stage('wait for publish confirmation'){
+	timeout(time:1, unit:'DAYS') {
+		input message:'Publish packet?'
+	}
+}	
+
+node('words-windows') {
+	try {
+		SDK_VERSION = powershell(returnStdout: true, script:'echo ((ConvertFrom-Json -InputObject (New-Object System.Net.WebClient).DownloadString("https://api.aspose.cloud/v4.0/words/swagger/spec")).info.version | Select-String -Pattern "^\\d+\\.\\d+" ).Matches[0].Value')
+		
+		stage('publish') {
+			bat '.nuget/NuGet.exe push packages/Aspose.Words-Cloud.$env:SDK_VERSION.0.nupkg -ApiKey $env:NugetToken -Timeout 610 -Source https://www.nuget.org/api/v2/package'
+		}
+		
+		stage('add version tag') {
+			withCredentials([usernamePassword(credentialsId: '361885ba-9425-4230-950e-0af201d90547', usernameVariable: 'gitUsername', passwordVariable: 'gitPass')]) {
+				gitRepoUrl = "https://${gitUsername}:${gitPass}@git.auckland.dynabic.com/words-cloud/words-cloud-node.git"
+			}
+			bat "git remote set-url origin ${gitRepoUrl}"
+			bat 'git checkout testPackage'
+			bat 'git reset --hard origin/testPackage'
+			bat "git tag -a ${SDK_VERSION} -m \"version ${SDK_VERSION}\""
+			bat "git push ${gitRepoUrl} ${SDK_VERSION}'
+		}
+	} finally {
+		deleteDir()
+	}
+}
