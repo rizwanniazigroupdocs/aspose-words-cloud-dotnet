@@ -4,7 +4,7 @@ node('words-windows') {
 			checkout([$class: 'GitSCM', branches: [[name: '*/WORDSCLOUD-896']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'LocalBranch', localBranch: "**"]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '361885ba-9425-4230-950e-0af201d90547', url: 'https://git.auckland.dynabic.com/words-cloud/words-cloud-dotnet.git']]])
 		}
 		stage('build'){
-			env.SDK_VERSION = powershell(returnStdout: true, script:'echo ((ConvertFrom-Json -InputObject (New-Object System.Net.WebClient).DownloadString("https://api.aspose.cloud/v4.0/words/swagger/spec")).info.version | Select-String -Pattern "^\\d+\\.\\d+" ).Matches[0].Value')
+			env.SDK_VERSION = powershell(returnStdout: true, script:'echo ((ConvertFrom-Json -InputObject (New-Object System.Net.WebClient).DownloadString("https://api.aspose.cloud/v4.0/words/swagger/spec")).info.version | Select-String -Pattern "^\\d+\\.\\d+" ).Matches[0].Value').trim()
 			
 			withCredentials([file(credentialsId: 'pfxFile', variable: 'pfxFilePath')]) {
 				powershell "Copy-Item $pfxFilePath -Destination  .\\scripts\\aspose.pfx"
@@ -15,7 +15,7 @@ node('words-windows') {
 			}			
 			
 			powershell 'docker build .\\scripts -f .\\scripts\\build.Dockerfile -t netsdkbuild'
-			powershell 'docker run -v "${PWD}:C:/Build/" -e SDK_VERSION=$env:SDK_VERSION netsdkbuild c:\\build\\scripts\\build-release.bat'     
+			powershell 'docker run -v ${PWD}:C:\\Build\\ -e SDK_VERSION=$env:SDK_VERSION netsdkbuild c:\\build\\scripts\\build-release.bat'     
 		}
 		
 		stage('test the package') {
@@ -23,6 +23,9 @@ node('words-windows') {
 				env.gitRepoUrl = "https://%gitUsername%:%gitPass%@git.auckland.dynabic.com/words-cloud/words-cloud-node.git"
 				env.source = "WORDSCLOUD-896"
 			}
+			
+			bat "git config user.email 'jenkins.aspose@gmail.com'"
+			bat "git config user.name 'jenkins'"
 			
 			bat "git checkout %source%"
 			bat "git remote set-url origin %gitRepoUrl%"
@@ -66,6 +69,10 @@ node('words-windows') {
 			withCredentials([usernamePassword(credentialsId: '361885ba-9425-4230-950e-0af201d90547', usernameVariable: 'gitUsername', passwordVariable: 'gitPass')]) {
 				env.gitRepoUrl = "https://%gitUsername%:%gitPass%@git.auckland.dynabic.com/words-cloud/words-cloud-node.git"
 			}
+			
+			bat "git config user.email 'jenkins.aspose@gmail.com'"
+			bat "git config user.name 'jenkins'"
+			
 			bat "git remote set-url origin %gitRepoUrl%"
 			bat 'git checkout testPackage'
 			bat 'git reset --hard origin/testPackage'
