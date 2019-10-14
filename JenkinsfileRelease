@@ -18,10 +18,6 @@ node('words-windows') {
 			powershell 'docker run -v ${PWD}:C:\\Build\\ -e SDK_VERSION=$env:SDK_VERSION netsdkbuild c:\\build\\scripts\\build-release.bat'     
 		}
 		
-		stage('build with package') {
-			bat 'docker run -v %CD%:C:\\Build\\ netsdkbuild c:\\build\\scripts\\build.bat' 
-		}
-		
 		stage('tests with package') {
 			bat 'mkdir testResults'
 			bat 'mkdir Settings'
