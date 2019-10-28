@@ -46,7 +46,7 @@ dotnet add c:\Build\Aspose.Words.Cloud.Sdk.BddTests\Aspose.Words.Cloud.Sdk.BddTe
 
 :Build tests
 c:\build\.nuget\NuGet.exe restore c:\build\Aspose.Words.Cloud.Sdk.sln || goto end
-msbuild c:\build\Aspose.Words.Cloud.Sdk.sln /p:Configuration=Release;OutputPath=c:\Build\buildOut\
+msbuild c:\build\Aspose.Words.Cloud.Sdk.sln
 
 :end
 exit /b %ERRORLEVEL%

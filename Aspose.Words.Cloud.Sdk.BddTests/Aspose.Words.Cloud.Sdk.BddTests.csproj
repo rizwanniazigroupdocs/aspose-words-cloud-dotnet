@@ -20,6 +20,8 @@
     <ProjectReference Include="..\Aspose.Words.Cloud.Sdk\Aspose.Words.Cloud.Sdk.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <None Update="specflow.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

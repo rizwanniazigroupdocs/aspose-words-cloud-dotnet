@@ -26,15 +26,27 @@ node('words-windows') {
 				}
 				
 				try {
-					bat 'tools\\nunit\\nunit3-console.exe buildOut\\Aspose.Words.Cloud.Sdk.Tests.dll  --result="testResults\\tests-result.xml;transform=tools\\nunit\\nunit3-junit.xslt"'
+					bat 'tools\\nunit\\nunit3-console.exe Aspose.Words.Cloud.Sdk.Tests\\bin\\Debug\\net452\\Aspose.Words.Cloud.Sdk.Tests.dll  --result="testResults\\tests-result-net452.xml;transform=tools\\nunit\\nunit3-junit.xslt"'
 				} finally {
-					junit 'testResults\\tests-result.xml'
+					junit 'testResults\\tests-result-net452.xml'
 				}
 				
 				try {
-					bat 'tools\\nunit\\nunit3-console.exe buildOut\\Aspose.Words.Cloud.Sdk.BddTests.dll --result="testResults\\bddtests-result.xml;transform=tools\\nunit\\nunit3-junit.xslt"'
+					bat 'tools\\nunit\\nunit3-console.exe Aspose.Words.Cloud.Sdk.Tests\\bin\\Debug\\netcoreapp2.1\\Aspose.Words.Cloud.Sdk.Tests.dll  --result="testResults\\tests-result-netcoreapp2.xml;transform=tools\\nunit\\nunit3-junit.xslt"'
 				} finally {
-					junit 'testResults\\bddtests-result.xml'
+					junit 'testResults\\tests-result-netcoreapp2.xml'
+				}
+				
+				try {
+					bat 'tools\\nunit\\nunit3-console.exe Aspose.Words.Cloud.Sdk.Tests\\bin\\Debug\\net452\\Aspose.Words.Cloud.Sdk.BddTests.dll --result="testResults\\bddtests-result-net452.xml;transform=tools\\nunit\\nunit3-junit.xslt"'
+				} finally {
+					junit 'testResults\\bddtests-result-net452.xml'
+				}
+				
+				try {
+					bat 'tools\\nunit\\nunit3-console.exe Aspose.Words.Cloud.Sdk.Tests\\bin\\Debug\\netcoreapp2.1\\Aspose.Words.Cloud.Sdk.BddTests.dll --result="testResults\\bddtests-result-netcoreapp2.xml;transform=tools\\nunit\\nunit3-junit.xslt"'
+				} finally {
+					junit 'testResults\\bddtests-result-netcoreapp2.xml'
 				}
 			}
 		}
