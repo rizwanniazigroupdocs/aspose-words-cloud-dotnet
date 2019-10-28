@@ -32,7 +32,7 @@ node('words-windows') {
 				}
 				
 				try {
-					bat 'dotnet test Aspose.Words.Cloud.Sdk.Tests\Aspose.Words.Cloud.Sdk.Tests.csproj --framework netcoreapp2.1 --logger "junit;LogFilePath=%CD%\\testResults\\tests-result-netcoreapp2.xml" --no-restore --no-build'
+					bat 'dotnet test Aspose.Words.Cloud.Sdk.Tests\\Aspose.Words.Cloud.Sdk.Tests.csproj --framework netcoreapp2.1 --logger "junit;LogFilePath=%CD%\\testResults\\tests-result-netcoreapp2.xml" --no-restore --no-build'
 				} finally {
 					junit 'testResults\\tests-result-netcoreapp2.xml'
 				}
@@ -44,7 +44,7 @@ node('words-windows') {
 				}
 				
 				try {
-					bat 'dotnet test Aspose.Words.Cloud.Sdk.BddTests\Aspose.Words.Cloud.Sdk.BddTests.csproj --framework netcoreapp2.1 --logger "junit;LogFilePath=%CD%\\testResults\\bddtests-result-netcoreapp2.xml" --no-restore --no-build'
+					bat 'dotnet test Aspose.Words.Cloud.Sdk.BddTests\\Aspose.Words.Cloud.Sdk.BddTests.csproj --framework netcoreapp2.1 --logger "junit;LogFilePath=%CD%\\testResults\\bddtests-result-netcoreapp2.xml" --no-restore --no-build'
 				} finally {
 					junit 'testResults\\bddtests-result-netcoreapp2.xml'
 				}
