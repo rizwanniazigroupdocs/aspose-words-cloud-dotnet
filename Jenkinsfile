@@ -26,27 +26,27 @@ node('words-windows') {
 				}
 				
 				try {
-					bat 'tools\\nunit\\nunit3-console.exe Aspose.Words.Cloud.Sdk.Tests\\bin\\Debug\\net452\\Aspose.Words.Cloud.Sdk.Tests.dll  --result="testResults\\tests-result-net452.xml;transform=tools\\nunit\\nunit3-junit.xslt"'
+					bat 'docker run -v %CD%:C:\\Build\\ netsdkbuild c:\\build\\scripts\\net-test.bat Tests'
 				} finally {
 					junit 'testResults\\tests-result-net452.xml'
 				}
 				
 				try {
-					bat 'dotnet test Aspose.Words.Cloud.Sdk.Tests\\Aspose.Words.Cloud.Sdk.Tests.csproj --framework netcoreapp2.1 --logger "junit;LogFilePath=%CD%\\testResults\\tests-result-netcoreapp2.xml" --no-restore --no-build'
+					bat 'docker run -v %CD%:C:\\Build\\ netsdkbuild c:\\build\\scripts\\core-test.bat Tests'
 				} finally {
-					junit 'testResults\\tests-result-netcoreapp2.xml'
+					junit 'testResults\\tests-result-netcoreapp2.1.xml'
 				}
 				
 				try {
-					bat 'tools\\nunit\\nunit3-console.exe Aspose.Words.Cloud.Sdk.BddTests\\bin\\Debug\\net452\\Aspose.Words.Cloud.Sdk.BddTests.dll --result="testResults\\bddtests-result-net452.xml;transform=tools\\nunit\\nunit3-junit.xslt"'
+					bat 'docker run -v %CD%:C:\\Build\\ netsdkbuild c:\\build\\scripts\\net-test.bat BddTests'
 				} finally {
 					junit 'testResults\\bddtests-result-net452.xml'
 				}
 				
 				try {
-					bat 'dotnet test Aspose.Words.Cloud.Sdk.BddTests\\Aspose.Words.Cloud.Sdk.BddTests.csproj --framework netcoreapp2.1 --logger "junit;LogFilePath=%CD%\\testResults\\bddtests-result-netcoreapp2.xml" --no-restore --no-build'
+					bat 'docker run -v %CD%:C:\\Build\\ netsdkbuild c:\\build\\scripts\\core-test.bat BddTests'
 				} finally {
-					junit 'testResults\\bddtests-result-netcoreapp2.xml'
+					junit 'testResults\\bddtests-result-netcoreapp2.1.xml'
 				}
 			}
 		}
