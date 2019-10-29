@@ -28,25 +28,25 @@ node('windows2019') {
 				try {
 					bat 'docker run -v %CD%:C:\\Build\\ netsdkbuild c:\\build\\scripts\\net-test.bat Tests'
 				} finally {
-					junit 'testResults\\tests-result-net452.xml'
+					junit '**\\testResults\\Tests-result-net452.xml'
 				}
 				
 				try {
 					bat 'docker run -v %CD%:C:\\Build\\ netsdkbuild c:\\build\\scripts\\core-test.bat Tests'
 				} finally {
-					junit 'testResults\\tests-result-netcoreapp2.1.xml'
+					junit '**\\testResults\\Tests-result-netcoreapp2.1.xml'
 				}
 				
 				try {
 					bat 'docker run -v %CD%:C:\\Build\\ netsdkbuild c:\\build\\scripts\\net-test.bat BddTests'
 				} finally {
-					junit 'testResults\\bddtests-result-net452.xml'
+					junit '**\\testResults\\BddTests-result-net452.xml'
 				}
 				
 				try {
 					bat 'docker run -v %CD%:C:\\Build\\ netsdkbuild c:\\build\\scripts\\core-test.bat BddTests'
 				} finally {
-					junit 'testResults\\bddtests-result-netcoreapp2.1.xml'
+					junit '**\\testResults\\BddTests-result-netcoreapp2.1.xml'
 				}
 			}
 		}
