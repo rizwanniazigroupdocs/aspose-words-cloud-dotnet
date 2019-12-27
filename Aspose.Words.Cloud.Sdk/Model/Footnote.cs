@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="Footnote.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,45 +39,45 @@ namespace Aspose.Words.Cloud.Sdk.Model
   public class Footnote : FootnoteLink 
   {                       
         /// <summary>
-        /// Returns a value that specifies whether this is a footnote or endnote.
+        /// Gets or sets returns a value that specifies whether this is a footnote or endnote.
         /// </summary>
-        /// <value>Returns a value that specifies whether this is a footnote or endnote.</value>
+        /// <value>Gets or sets returns a value that specifies whether this is a footnote or endnote.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum FootnoteTypeEnum
         { 
             /// <summary>
-            /// Enum Footnote for "Footnote"
-            /// </summary>            
+            /// Enum value "Footnote"
+            /// </summary>
             Footnote,
             
             /// <summary>
-            /// Enum Endnote for "Endnote"
-            /// </summary>            
+            /// Enum value "Endnote"
+            /// </summary>
             Endnote            
         }
 
         /// <summary>
-        /// Returns a value that specifies whether this is a footnote or endnote.
+        /// Gets or sets returns a value that specifies whether this is a footnote or endnote.
         /// </summary>
         public FootnoteTypeEnum? FootnoteType { get; set; }
 
         /// <summary>
-        /// Content of footnote.
+        /// Gets or sets content of footnote.
         /// </summary>  
         public StoryChildNodes Content { get; set; }
 
         /// <summary>
-        /// Link to comment range start node.
+        /// Gets or sets link to comment range start node.
         /// </summary>  
         public DocumentPosition Position { get; set; }
 
         /// <summary>
-        /// Gets/sets custom reference mark to be used for this footnote. Default value is , meaning auto-numbered footnotes are used.
+        /// Gets or sets /sets custom reference mark to be used for this footnote. Default value is , meaning auto-numbered footnotes are used.
         /// </summary>  
         public string ReferenceMark { get; set; }
 
         /// <summary>
-        /// This is a convenience property that allows to easily get or set text of the footnote.
+        /// Gets or sets this is a convenience property that allows to easily get or set text of the footnote.
         /// </summary>  
         public string Text { get; set; }
 

@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="OfficeMathObjectResponse.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// This response should be returned by the service when handling: GET http://api.aspose.com/v1.1/words/Test.doc/officeMathObjects/0 
+  /// This response should be returned by the service when handling: GET http://api.aspose.com/v4.0/words/Test.doc/officeMathObjects/0.
   /// </summary>  
-  public class OfficeMathObjectResponse : AsposeResponse 
+  public class OfficeMathObjectResponse : WordsResponse 
   {                       
         /// <summary>
-        /// OfficeMathObject information
+        /// Gets or sets officeMathObject information.
         /// </summary>  
         public OfficeMathObject OfficeMathObject { get; set; }
 

@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="HeaderFooterLinkCollection.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Collection of links to header/footers
+  /// Collection of links to header/footers.
   /// </summary>  
   public class HeaderFooterLinkCollection : LinkElement 
   {                       
         /// <summary>
-        /// Collection of section's links
+        /// Gets or sets collection of section's links.
         /// </summary>  
         public List<HeaderFooterLink> List { get; set; }
 

@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="ModificationOperationResult.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,17 +34,17 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// result of the operation which modifies the original document and saves the result
+  /// result of the operation which modifies the original document and saves the result.
   /// </summary>  
   public class ModificationOperationResult 
   {                       
         /// <summary>
-        /// Link to the source document (source for the modification operation)
+        /// Gets or sets link to the source document (source for the modification operation).
         /// </summary>  
         public FileLink Source { get; set; }
 
         /// <summary>
-        /// Link to the dest document (result of the modification operation)
+        /// Gets or sets link to the dest document (result of the modification operation).
         /// </summary>  
         public FileLink Dest { get; set; }
 

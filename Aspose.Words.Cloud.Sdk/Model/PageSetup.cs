@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PageSetup.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,25 +39,25 @@ namespace Aspose.Words.Cloud.Sdk.Model
   public class PageSetup : LinkElement 
   {                       
         /// <summary>
-        /// Specifies which pages the page border is printed on.             
+        /// Gets or sets specifies which pages the page border is printed on.             
         /// </summary>
-        /// <value>Specifies which pages the page border is printed on.             </value>
+        /// <value>Gets or sets specifies which pages the page border is printed on.             </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum BorderAppliesToEnum
         { 
             /// <summary>
-            /// Enum AllPages for "AllPages"
-            /// </summary>            
+            /// Enum value "AllPages"
+            /// </summary>
             AllPages,
             
             /// <summary>
-            /// Enum FirstPage for "FirstPage"
-            /// </summary>            
+            /// Enum value "FirstPage"
+            /// </summary>
             FirstPage,
             
             /// <summary>
-            /// Enum OtherPages for "OtherPages"
-            /// </summary>            
+            /// Enum value "OtherPages"
+            /// </summary>
             OtherPages            
         }
 
@@ -69,13 +69,13 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public enum BorderDistanceFromEnum
         { 
             /// <summary>
-            /// Enum Text for "Text"
-            /// </summary>            
+            /// Enum value "Text"
+            /// </summary>
             Text,
             
             /// <summary>
-            /// Enum PageEdge for "PageEdge"
-            /// </summary>            
+            /// Enum value "PageEdge"
+            /// </summary>
             PageEdge            
         }
 
@@ -87,36 +87,36 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public enum LineNumberRestartModeEnum
         { 
             /// <summary>
-            /// Enum RestartPage for "RestartPage"
-            /// </summary>            
+            /// Enum value "RestartPage"
+            /// </summary>
             RestartPage,
             
             /// <summary>
-            /// Enum RestartSection for "RestartSection"
-            /// </summary>            
+            /// Enum value "RestartSection"
+            /// </summary>
             RestartSection,
             
             /// <summary>
-            /// Enum Continuous for "Continuous"
-            /// </summary>            
+            /// Enum value "Continuous"
+            /// </summary>
             Continuous            
         }
 
         /// <summary>
-        /// Returns or sets the orientation of the page.             
+        /// Gets or sets returns or sets the orientation of the page.             
         /// </summary>
-        /// <value>Returns or sets the orientation of the page.             </value>
+        /// <value>Gets or sets returns or sets the orientation of the page.             </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OrientationEnum
         { 
             /// <summary>
-            /// Enum Portrait for "Portrait"
-            /// </summary>            
+            /// Enum value "Portrait"
+            /// </summary>
             Portrait,
             
             /// <summary>
-            /// Enum Landscape for "Landscape"
-            /// </summary>            
+            /// Enum value "Landscape"
+            /// </summary>
             Landscape            
         }
 
@@ -128,472 +128,472 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public enum PageNumberStyleEnum
         { 
             /// <summary>
-            /// Enum Arabic for "Arabic"
-            /// </summary>            
+            /// Enum value "Arabic"
+            /// </summary>
             Arabic,
             
             /// <summary>
-            /// Enum UppercaseRoman for "UppercaseRoman"
-            /// </summary>            
+            /// Enum value "UppercaseRoman"
+            /// </summary>
             UppercaseRoman,
             
             /// <summary>
-            /// Enum LowercaseRoman for "LowercaseRoman"
-            /// </summary>            
+            /// Enum value "LowercaseRoman"
+            /// </summary>
             LowercaseRoman,
             
             /// <summary>
-            /// Enum UppercaseLetter for "UppercaseLetter"
-            /// </summary>            
+            /// Enum value "UppercaseLetter"
+            /// </summary>
             UppercaseLetter,
             
             /// <summary>
-            /// Enum LowercaseLetter for "LowercaseLetter"
-            /// </summary>            
+            /// Enum value "LowercaseLetter"
+            /// </summary>
             LowercaseLetter,
             
             /// <summary>
-            /// Enum Ordinal for "Ordinal"
-            /// </summary>            
+            /// Enum value "Ordinal"
+            /// </summary>
             Ordinal,
             
             /// <summary>
-            /// Enum Number for "Number"
-            /// </summary>            
+            /// Enum value "Number"
+            /// </summary>
             Number,
             
             /// <summary>
-            /// Enum OrdinalText for "OrdinalText"
-            /// </summary>            
+            /// Enum value "OrdinalText"
+            /// </summary>
             OrdinalText,
             
             /// <summary>
-            /// Enum Hex for "Hex"
-            /// </summary>            
+            /// Enum value "Hex"
+            /// </summary>
             Hex,
             
             /// <summary>
-            /// Enum ChicagoManual for "ChicagoManual"
-            /// </summary>            
+            /// Enum value "ChicagoManual"
+            /// </summary>
             ChicagoManual,
             
             /// <summary>
-            /// Enum Kanji for "Kanji"
-            /// </summary>            
+            /// Enum value "Kanji"
+            /// </summary>
             Kanji,
             
             /// <summary>
-            /// Enum KanjiDigit for "KanjiDigit"
-            /// </summary>            
+            /// Enum value "KanjiDigit"
+            /// </summary>
             KanjiDigit,
             
             /// <summary>
-            /// Enum AiueoHalfWidth for "AiueoHalfWidth"
-            /// </summary>            
+            /// Enum value "AiueoHalfWidth"
+            /// </summary>
             AiueoHalfWidth,
             
             /// <summary>
-            /// Enum IrohaHalfWidth for "IrohaHalfWidth"
-            /// </summary>            
+            /// Enum value "IrohaHalfWidth"
+            /// </summary>
             IrohaHalfWidth,
             
             /// <summary>
-            /// Enum ArabicFullWidth for "ArabicFullWidth"
-            /// </summary>            
+            /// Enum value "ArabicFullWidth"
+            /// </summary>
             ArabicFullWidth,
             
             /// <summary>
-            /// Enum ArabicHalfWidth for "ArabicHalfWidth"
-            /// </summary>            
+            /// Enum value "ArabicHalfWidth"
+            /// </summary>
             ArabicHalfWidth,
             
             /// <summary>
-            /// Enum KanjiTraditional for "KanjiTraditional"
-            /// </summary>            
+            /// Enum value "KanjiTraditional"
+            /// </summary>
             KanjiTraditional,
             
             /// <summary>
-            /// Enum KanjiTraditional2 for "KanjiTraditional2"
-            /// </summary>            
+            /// Enum value "KanjiTraditional2"
+            /// </summary>
             KanjiTraditional2,
             
             /// <summary>
-            /// Enum NumberInCircle for "NumberInCircle"
-            /// </summary>            
+            /// Enum value "NumberInCircle"
+            /// </summary>
             NumberInCircle,
             
             /// <summary>
-            /// Enum DecimalFullWidth for "DecimalFullWidth"
-            /// </summary>            
+            /// Enum value "DecimalFullWidth"
+            /// </summary>
             DecimalFullWidth,
             
             /// <summary>
-            /// Enum Aiueo for "Aiueo"
-            /// </summary>            
+            /// Enum value "Aiueo"
+            /// </summary>
             Aiueo,
             
             /// <summary>
-            /// Enum Iroha for "Iroha"
-            /// </summary>            
+            /// Enum value "Iroha"
+            /// </summary>
             Iroha,
             
             /// <summary>
-            /// Enum LeadingZero for "LeadingZero"
-            /// </summary>            
+            /// Enum value "LeadingZero"
+            /// </summary>
             LeadingZero,
             
             /// <summary>
-            /// Enum Bullet for "Bullet"
-            /// </summary>            
+            /// Enum value "Bullet"
+            /// </summary>
             Bullet,
             
             /// <summary>
-            /// Enum Ganada for "Ganada"
-            /// </summary>            
+            /// Enum value "Ganada"
+            /// </summary>
             Ganada,
             
             /// <summary>
-            /// Enum Chosung for "Chosung"
-            /// </summary>            
+            /// Enum value "Chosung"
+            /// </summary>
             Chosung,
             
             /// <summary>
-            /// Enum GB1 for "GB1"
-            /// </summary>            
+            /// Enum value "GB1"
+            /// </summary>
             GB1,
             
             /// <summary>
-            /// Enum GB2 for "GB2"
-            /// </summary>            
+            /// Enum value "GB2"
+            /// </summary>
             GB2,
             
             /// <summary>
-            /// Enum GB3 for "GB3"
-            /// </summary>            
+            /// Enum value "GB3"
+            /// </summary>
             GB3,
             
             /// <summary>
-            /// Enum GB4 for "GB4"
-            /// </summary>            
+            /// Enum value "GB4"
+            /// </summary>
             GB4,
             
             /// <summary>
-            /// Enum Zodiac1 for "Zodiac1"
-            /// </summary>            
+            /// Enum value "Zodiac1"
+            /// </summary>
             Zodiac1,
             
             /// <summary>
-            /// Enum Zodiac2 for "Zodiac2"
-            /// </summary>            
+            /// Enum value "Zodiac2"
+            /// </summary>
             Zodiac2,
             
             /// <summary>
-            /// Enum Zodiac3 for "Zodiac3"
-            /// </summary>            
+            /// Enum value "Zodiac3"
+            /// </summary>
             Zodiac3,
             
             /// <summary>
-            /// Enum TradChinNum1 for "TradChinNum1"
-            /// </summary>            
+            /// Enum value "TradChinNum1"
+            /// </summary>
             TradChinNum1,
             
             /// <summary>
-            /// Enum TradChinNum2 for "TradChinNum2"
-            /// </summary>            
+            /// Enum value "TradChinNum2"
+            /// </summary>
             TradChinNum2,
             
             /// <summary>
-            /// Enum TradChinNum3 for "TradChinNum3"
-            /// </summary>            
+            /// Enum value "TradChinNum3"
+            /// </summary>
             TradChinNum3,
             
             /// <summary>
-            /// Enum TradChinNum4 for "TradChinNum4"
-            /// </summary>            
+            /// Enum value "TradChinNum4"
+            /// </summary>
             TradChinNum4,
             
             /// <summary>
-            /// Enum SimpChinNum1 for "SimpChinNum1"
-            /// </summary>            
+            /// Enum value "SimpChinNum1"
+            /// </summary>
             SimpChinNum1,
             
             /// <summary>
-            /// Enum SimpChinNum2 for "SimpChinNum2"
-            /// </summary>            
+            /// Enum value "SimpChinNum2"
+            /// </summary>
             SimpChinNum2,
             
             /// <summary>
-            /// Enum SimpChinNum3 for "SimpChinNum3"
-            /// </summary>            
+            /// Enum value "SimpChinNum3"
+            /// </summary>
             SimpChinNum3,
             
             /// <summary>
-            /// Enum SimpChinNum4 for "SimpChinNum4"
-            /// </summary>            
+            /// Enum value "SimpChinNum4"
+            /// </summary>
             SimpChinNum4,
             
             /// <summary>
-            /// Enum HanjaRead for "HanjaRead"
-            /// </summary>            
+            /// Enum value "HanjaRead"
+            /// </summary>
             HanjaRead,
             
             /// <summary>
-            /// Enum HanjaReadDigit for "HanjaReadDigit"
-            /// </summary>            
+            /// Enum value "HanjaReadDigit"
+            /// </summary>
             HanjaReadDigit,
             
             /// <summary>
-            /// Enum Hangul for "Hangul"
-            /// </summary>            
+            /// Enum value "Hangul"
+            /// </summary>
             Hangul,
             
             /// <summary>
-            /// Enum Hanja for "Hanja"
-            /// </summary>            
+            /// Enum value "Hanja"
+            /// </summary>
             Hanja,
             
             /// <summary>
-            /// Enum Hebrew1 for "Hebrew1"
-            /// </summary>            
+            /// Enum value "Hebrew1"
+            /// </summary>
             Hebrew1,
             
             /// <summary>
-            /// Enum Arabic1 for "Arabic1"
-            /// </summary>            
+            /// Enum value "Arabic1"
+            /// </summary>
             Arabic1,
             
             /// <summary>
-            /// Enum Hebrew2 for "Hebrew2"
-            /// </summary>            
+            /// Enum value "Hebrew2"
+            /// </summary>
             Hebrew2,
             
             /// <summary>
-            /// Enum Arabic2 for "Arabic2"
-            /// </summary>            
+            /// Enum value "Arabic2"
+            /// </summary>
             Arabic2,
             
             /// <summary>
-            /// Enum HindiLetter1 for "HindiLetter1"
-            /// </summary>            
+            /// Enum value "HindiLetter1"
+            /// </summary>
             HindiLetter1,
             
             /// <summary>
-            /// Enum HindiLetter2 for "HindiLetter2"
-            /// </summary>            
+            /// Enum value "HindiLetter2"
+            /// </summary>
             HindiLetter2,
             
             /// <summary>
-            /// Enum HindiArabic for "HindiArabic"
-            /// </summary>            
+            /// Enum value "HindiArabic"
+            /// </summary>
             HindiArabic,
             
             /// <summary>
-            /// Enum HindiCardinalText for "HindiCardinalText"
-            /// </summary>            
+            /// Enum value "HindiCardinalText"
+            /// </summary>
             HindiCardinalText,
             
             /// <summary>
-            /// Enum ThaiLetter for "ThaiLetter"
-            /// </summary>            
+            /// Enum value "ThaiLetter"
+            /// </summary>
             ThaiLetter,
             
             /// <summary>
-            /// Enum ThaiArabic for "ThaiArabic"
-            /// </summary>            
+            /// Enum value "ThaiArabic"
+            /// </summary>
             ThaiArabic,
             
             /// <summary>
-            /// Enum ThaiCardinalText for "ThaiCardinalText"
-            /// </summary>            
+            /// Enum value "ThaiCardinalText"
+            /// </summary>
             ThaiCardinalText,
             
             /// <summary>
-            /// Enum VietCardinalText for "VietCardinalText"
-            /// </summary>            
+            /// Enum value "VietCardinalText"
+            /// </summary>
             VietCardinalText,
             
             /// <summary>
-            /// Enum NumberInDash for "NumberInDash"
-            /// </summary>            
+            /// Enum value "NumberInDash"
+            /// </summary>
             NumberInDash,
             
             /// <summary>
-            /// Enum LowercaseRussian for "LowercaseRussian"
-            /// </summary>            
+            /// Enum value "LowercaseRussian"
+            /// </summary>
             LowercaseRussian,
             
             /// <summary>
-            /// Enum UppercaseRussian for "UppercaseRussian"
-            /// </summary>            
+            /// Enum value "UppercaseRussian"
+            /// </summary>
             UppercaseRussian,
             
             /// <summary>
-            /// Enum None for "None"
-            /// </summary>            
+            /// Enum value "None"
+            /// </summary>
             None,
             
             /// <summary>
-            /// Enum Custom for "Custom"
-            /// </summary>            
+            /// Enum value "Custom"
+            /// </summary>
             Custom            
         }
 
         /// <summary>
-        /// Returns or sets the paper size.             
+        /// Gets or sets returns or sets the paper size.             
         /// </summary>
-        /// <value>Returns or sets the paper size.             </value>
+        /// <value>Gets or sets returns or sets the paper size.             </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PaperSizeEnum
         { 
             /// <summary>
-            /// Enum A3 for "A3"
-            /// </summary>            
+            /// Enum value "A3"
+            /// </summary>
             A3,
             
             /// <summary>
-            /// Enum A4 for "A4"
-            /// </summary>            
+            /// Enum value "A4"
+            /// </summary>
             A4,
             
             /// <summary>
-            /// Enum A5 for "A5"
-            /// </summary>            
+            /// Enum value "A5"
+            /// </summary>
             A5,
             
             /// <summary>
-            /// Enum B4 for "B4"
-            /// </summary>            
+            /// Enum value "B4"
+            /// </summary>
             B4,
             
             /// <summary>
-            /// Enum B5 for "B5"
-            /// </summary>            
+            /// Enum value "B5"
+            /// </summary>
             B5,
             
             /// <summary>
-            /// Enum Executive for "Executive"
-            /// </summary>            
+            /// Enum value "Executive"
+            /// </summary>
             Executive,
             
             /// <summary>
-            /// Enum Folio for "Folio"
-            /// </summary>            
+            /// Enum value "Folio"
+            /// </summary>
             Folio,
             
             /// <summary>
-            /// Enum Ledger for "Ledger"
-            /// </summary>            
+            /// Enum value "Ledger"
+            /// </summary>
             Ledger,
             
             /// <summary>
-            /// Enum Legal for "Legal"
-            /// </summary>            
+            /// Enum value "Legal"
+            /// </summary>
             Legal,
             
             /// <summary>
-            /// Enum Letter for "Letter"
-            /// </summary>            
+            /// Enum value "Letter"
+            /// </summary>
             Letter,
             
             /// <summary>
-            /// Enum EnvelopeDL for "EnvelopeDL"
-            /// </summary>            
+            /// Enum value "EnvelopeDL"
+            /// </summary>
             EnvelopeDL,
             
             /// <summary>
-            /// Enum Quarto for "Quarto"
-            /// </summary>            
+            /// Enum value "Quarto"
+            /// </summary>
             Quarto,
             
             /// <summary>
-            /// Enum Statement for "Statement"
-            /// </summary>            
+            /// Enum value "Statement"
+            /// </summary>
             Statement,
             
             /// <summary>
-            /// Enum Tabloid for "Tabloid"
-            /// </summary>            
+            /// Enum value "Tabloid"
+            /// </summary>
             Tabloid,
             
             /// <summary>
-            /// Enum Paper10x14 for "Paper10x14"
-            /// </summary>            
+            /// Enum value "Paper10x14"
+            /// </summary>
             Paper10x14,
             
             /// <summary>
-            /// Enum Paper11x17 for "Paper11x17"
-            /// </summary>            
+            /// Enum value "Paper11x17"
+            /// </summary>
             Paper11x17,
             
             /// <summary>
-            /// Enum Custom for "Custom"
-            /// </summary>            
+            /// Enum value "Custom"
+            /// </summary>
             Custom            
         }
 
         /// <summary>
-        /// Returns or sets the type of section break for the specified object.             
+        /// Gets or sets returns or sets the type of section break for the specified object.             
         /// </summary>
-        /// <value>Returns or sets the type of section break for the specified object.             </value>
+        /// <value>Gets or sets returns or sets the type of section break for the specified object.             </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SectionStartEnum
         { 
             /// <summary>
-            /// Enum Continuous for "Continuous"
-            /// </summary>            
+            /// Enum value "Continuous"
+            /// </summary>
             Continuous,
             
             /// <summary>
-            /// Enum NewColumn for "NewColumn"
-            /// </summary>            
+            /// Enum value "NewColumn"
+            /// </summary>
             NewColumn,
             
             /// <summary>
-            /// Enum NewPage for "NewPage"
-            /// </summary>            
+            /// Enum value "NewPage"
+            /// </summary>
             NewPage,
             
             /// <summary>
-            /// Enum EvenPage for "EvenPage"
-            /// </summary>            
+            /// Enum value "EvenPage"
+            /// </summary>
             EvenPage,
             
             /// <summary>
-            /// Enum OddPage for "OddPage"
-            /// </summary>            
+            /// Enum value "OddPage"
+            /// </summary>
             OddPage            
         }
 
         /// <summary>
-        /// Returns or sets the vertical alignment of text on each page in a document or section.             
+        /// Gets or sets returns or sets the vertical alignment of text on each page in a document or section.             
         /// </summary>
-        /// <value>Returns or sets the vertical alignment of text on each page in a document or section.             </value>
+        /// <value>Gets or sets returns or sets the vertical alignment of text on each page in a document or section.             </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum VerticalAlignmentEnum
         { 
             /// <summary>
-            /// Enum Top for "Top"
-            /// </summary>            
+            /// Enum value "Top"
+            /// </summary>
             Top,
             
             /// <summary>
-            /// Enum Center for "Center"
-            /// </summary>            
+            /// Enum value "Center"
+            /// </summary>
             Center,
             
             /// <summary>
-            /// Enum Justify for "Justify"
-            /// </summary>            
+            /// Enum value "Justify"
+            /// </summary>
             Justify,
             
             /// <summary>
-            /// Enum Bottom for "Bottom"
-            /// </summary>            
+            /// Enum value "Bottom"
+            /// </summary>
             Bottom            
         }
 
         /// <summary>
-        /// Specifies which pages the page border is printed on.             
+        /// Gets or sets specifies which pages the page border is printed on.             
         /// </summary>
         public BorderAppliesToEnum? BorderAppliesTo { get; set; }
 
@@ -608,7 +608,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public LineNumberRestartModeEnum? LineNumberRestartMode { get; set; }
 
         /// <summary>
-        /// Returns or sets the orientation of the page.             
+        /// Gets or sets returns or sets the orientation of the page.             
         /// </summary>
         public OrientationEnum? Orientation { get; set; }
 
@@ -618,37 +618,37 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public PageNumberStyleEnum? PageNumberStyle { get; set; }
 
         /// <summary>
-        /// Returns or sets the paper size.             
+        /// Gets or sets returns or sets the paper size.             
         /// </summary>
         public PaperSizeEnum? PaperSize { get; set; }
 
         /// <summary>
-        /// Returns or sets the type of section break for the specified object.             
+        /// Gets or sets returns or sets the type of section break for the specified object.             
         /// </summary>
         public SectionStartEnum? SectionStart { get; set; }
 
         /// <summary>
-        /// Returns or sets the vertical alignment of text on each page in a document or section.             
+        /// Gets or sets returns or sets the vertical alignment of text on each page in a document or section.             
         /// </summary>
         public VerticalAlignmentEnum? VerticalAlignment { get; set; }
 
         /// <summary>
-        /// Specifies that this section contains bidirectional (complex scripts) text.             
+        /// Gets or sets specifies that this section contains bidirectional (complex scripts) text.             
         /// </summary>  
         public bool? Bidi { get; set; }
 
         /// <summary>
-        /// Specifies where the page border is positioned relative to intersecting texts and objects.             
+        /// Gets or sets specifies where the page border is positioned relative to intersecting texts and objects.             
         /// </summary>  
         public bool? BorderAlwaysInFront { get; set; }
 
         /// <summary>
-        /// Returns or sets the distance (in points) between the bottom edge of the page and the bottom boundary of the body text.             
+        /// Gets or sets returns or sets the distance (in points) between the bottom edge of the page and the bottom boundary of the body text.             
         /// </summary>  
         public double? BottomMargin { get; set; }
 
         /// <summary>
-        /// True if a different header or footer is used on the first page.             
+        /// Gets or sets true if a different header or footer is used on the first page.             
         /// </summary>  
         public bool? DifferentFirstPageHeaderFooter { get; set; }
 
@@ -658,7 +658,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public int? FirstPageTray { get; set; }
 
         /// <summary>
-        /// Returns or sets the distance (in points) between the footer and the bottom of the page.             
+        /// Gets or sets returns or sets the distance (in points) between the footer and the bottom of the page.             
         /// </summary>  
         public double? FooterDistance { get; set; }
 
@@ -668,17 +668,17 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public double? Gutter { get; set; }
 
         /// <summary>
-        /// Returns or sets the distance (in points) between the header and the top of the page.             
+        /// Gets or sets returns or sets the distance (in points) between the header and the top of the page.             
         /// </summary>  
         public double? HeaderDistance { get; set; }
 
         /// <summary>
-        /// Returns or sets the distance (in points) between the left edge of the page and the left boundary of the body text.             
+        /// Gets or sets returns or sets the distance (in points) between the left edge of the page and the left boundary of the body text.             
         /// </summary>  
         public double? LeftMargin { get; set; }
 
         /// <summary>
-        /// Returns or sets the numeric increment for line numbers.             
+        /// Gets or sets returns or sets the numeric increment for line numbers.             
         /// </summary>  
         public int? LineNumberCountBy { get; set; }
 
@@ -698,7 +698,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public int? OtherPagesTray { get; set; }
 
         /// <summary>
-        /// Returns or sets the height of the page in points.             
+        /// Gets or sets returns or sets the height of the page in points.             
         /// </summary>  
         public double? PageHeight { get; set; }
 
@@ -708,17 +708,17 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public int? PageStartingNumber { get; set; }
 
         /// <summary>
-        /// Returns or sets the width of the page in points.             
+        /// Gets or sets returns or sets the width of the page in points.             
         /// </summary>  
         public double? PageWidth { get; set; }
 
         /// <summary>
-        /// True if page numbering restarts at the beginning of the section.             
+        /// Gets or sets true if page numbering restarts at the beginning of the section.             
         /// </summary>  
         public bool? RestartPageNumbering { get; set; }
 
         /// <summary>
-        /// Returns or sets the distance (in points) between the right edge of the page and the right boundary of the body text.             
+        /// Gets or sets returns or sets the distance (in points) between the right edge of the page and the right boundary of the body text.             
         /// </summary>  
         public double? RightMargin { get; set; }
 
@@ -728,12 +728,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public bool? RtlGutter { get; set; }
 
         /// <summary>
-        /// True if endnotes are printed at the end of the next section that doesn't suppress endnotes.                 Suppressed endnotes are printed before the endnotes in that section.             
+        /// Gets or sets true if endnotes are printed at the end of the next section that doesn't suppress endnotes.                 Suppressed endnotes are printed before the endnotes in that section.             
         /// </summary>  
         public bool? SuppressEndnotes { get; set; }
 
         /// <summary>
-        /// Returns or sets the distance (in points) between the top edge of the page and the top boundary of the body text.             
+        /// Gets or sets returns or sets the distance (in points) between the top edge of the page and the top boundary of the body text.             
         /// </summary>  
         public double? TopMargin { get; set; }
 

@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="FormFieldCheckbox.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// FormField checkbox element
+  /// FormField checkbox element.
   /// </summary>  
   public class FormFieldCheckbox : FormField 
   {                       
@@ -46,7 +46,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
         /// <summary>
         /// Gets or sets the checked status of the check box form field.
         /// </summary>  
-        public bool? _Checked { get; set; }
+        public bool? Checked { get; set; }
 
         /// <summary>
         /// Gets or sets the boolean value that indicates whether the size of the textbox is automatic or specified explicitly.
@@ -62,7 +62,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
           var sb = new StringBuilder();
           sb.Append("class FormFieldCheckbox {\n");
           sb.Append("  CheckBoxSize: ").Append(this.CheckBoxSize).Append("\n");
-          sb.Append("  _Checked: ").Append(this._Checked).Append("\n");
+          sb.Append("  Checked: ").Append(this.Checked).Append("\n");
           sb.Append("  IsCheckBoxExactSize: ").Append(this.IsCheckBoxExactSize).Append("\n");
           sb.Append("}\n");
           return sb.ToString();

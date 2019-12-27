@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="XmlColor.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,17 +34,17 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Utility class for  serialization
+  /// Utility class for  serialization.
   /// </summary>  
   public class XmlColor 
   {                       
         /// <summary>
-        /// HTML string color representation
+        /// Gets or sets hTML string color representation.
         /// </summary>  
         public string Web { get; set; }
 
         /// <summary>
-        /// Alpha component of color structure
+        /// Gets or sets alpha component of color structure.
         /// </summary>  
         public int? Alpha { get; set; }
 

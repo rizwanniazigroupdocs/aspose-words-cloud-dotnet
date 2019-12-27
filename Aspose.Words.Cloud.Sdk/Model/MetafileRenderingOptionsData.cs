@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="MetafileRenderingOptionsData.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// container class for options of metafile rendering
+  /// container class for options of metafile rendering.
   /// </summary>  
   public class MetafileRenderingOptionsData 
   {                       
         /// <summary>
-        /// Determines how EMF+ Dual metafiles should be rendered
+        /// Gets or sets determines how EMF+ Dual metafiles should be rendered.
         /// </summary>  
         public string EmfPlusDualRenderingMode { get; set; }
 
@@ -49,14 +49,19 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public bool? EmulateRasterOperations { get; set; }
 
         /// <summary>
-        /// Determines how metafile images should be rendered
+        /// Gets or sets determines how metafile images should be rendered.
         /// </summary>  
         public string RenderingMode { get; set; }
 
         /// <summary>
-        /// Determines how WMF metafiles with embedded EMF metafiles should be rendered
+        /// Gets or sets determines how WMF metafiles with embedded EMF metafiles should be rendered.
         /// </summary>  
         public bool? UseEmfEmbeddedToWmf { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value determining whether or not to scale fonts in WMF metafile according to metafile size on the page. The default value is true.
+        /// </summary>  
+        public bool? ScaleWmfFontsToMetafileSize { get; set; }
 
         /// <summary>
         /// Get the string presentation of the object
@@ -70,6 +75,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
           sb.Append("  EmulateRasterOperations: ").Append(this.EmulateRasterOperations).Append("\n");
           sb.Append("  RenderingMode: ").Append(this.RenderingMode).Append("\n");
           sb.Append("  UseEmfEmbeddedToWmf: ").Append(this.UseEmfEmbeddedToWmf).Append("\n");
+          sb.Append("  ScaleWmfFontsToMetafileSize: ").Append(this.ScaleWmfFontsToMetafileSize).Append("\n");
           sb.Append("}\n");
           return sb.ToString();
         }

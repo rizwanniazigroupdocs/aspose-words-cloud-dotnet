@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="ProtectionRequest.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,22 +34,22 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Request on changing of protection
+  /// Request on changing of protection.
   /// </summary>  
   public class ProtectionRequest 
   {                       
         /// <summary>
-        /// Current password
+        /// Gets or sets current password.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// New password
+        /// Gets or sets new password.
         /// </summary>  
         public string NewPassword { get; set; }
 
         /// <summary>
-        /// New type of protection
+        /// Gets or sets new type of protection.
         /// </summary>  
         public string ProtectionType { get; set; }
 

@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="WatermarkText.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,17 +34,17 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Class for insert watermark text request building. 
+  /// Class for insert watermark text request building.
   /// </summary>  
   public class WatermarkText 
   {                       
         /// <summary>
-        /// The watermark text.
+        /// Gets or sets the watermark text.
         /// </summary>  
         public string Text { get; set; }
 
         /// <summary>
-        /// The watermark rotation angle.
+        /// Gets or sets the watermark rotation angle.
         /// </summary>  
         public double? RotationAngle { get; set; }
 

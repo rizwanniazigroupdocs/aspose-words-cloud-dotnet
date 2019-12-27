@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="TableCellInsert.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Table cell element
+  /// Table cell element.
   /// </summary>  
   public class TableCellInsert 
   {                       
         /// <summary>
-        /// Table cell will be inserted after cell with specified 0-based index.
+        /// Gets or sets table cell will be inserted after cell with specified 0-based index.
         /// </summary>  
         public int? InsertAfter { get; set; }
 

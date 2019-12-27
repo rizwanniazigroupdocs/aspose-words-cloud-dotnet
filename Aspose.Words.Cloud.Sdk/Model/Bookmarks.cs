@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="Bookmarks.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,7 +39,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
   public class Bookmarks : LinkElement 
   {                       
         /// <summary>
-        /// Array of bookmarks.
+        /// Gets or sets array of bookmarks.
         /// </summary>  
         public List<Bookmark> BookmarkList { get; set; }
 

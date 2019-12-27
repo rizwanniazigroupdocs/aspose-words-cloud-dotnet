@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="WordMLSaveOptionsData.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// container class for wml save options
+  /// container class for wml save options.
   /// </summary>  
   public class WordMLSaveOptionsData : SaveOptionsData 
   {                       
         /// <summary>
-        /// Specifies whether or not use pretty formats output
+        /// Gets or sets specifies whether or not use pretty formats output.
         /// </summary>  
         public bool? PrettyFormat { get; set; }
 

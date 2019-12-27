@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="Field.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Field
+  /// Field.
   /// </summary>  
   public class Field : FieldLink 
   {                       
@@ -44,7 +44,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public string LocaleId { get; set; }
 
         /// <summary>
-        /// Field result
+        /// Gets or sets field result.
         /// </summary>  
         public string Result { get; set; }
 

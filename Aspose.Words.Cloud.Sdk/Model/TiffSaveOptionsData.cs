@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="TiffSaveOptionsData.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,12 +39,17 @@ namespace Aspose.Words.Cloud.Sdk.Model
   public class TiffSaveOptionsData : ImageSaveOptionsData 
   {                       
         /// <summary>
-        /// Specifies method used while converting images to 1 bpp format.
+        /// Gets or sets the threshold that determines the value of the binarization error in the Floyd-Steinberg method. when ImageBinarizationMethod is ImageBinarizationMethod.FloydSteinbergDithering. Default value is 128.
+        /// </summary>  
+        public int? ThresholdForFloydSteinbergDithering { get; set; }
+
+        /// <summary>
+        /// Gets or sets specifies method used while converting images to 1 bpp format.
         /// </summary>  
         public string TiffBinarizationMethod { get; set; }
 
         /// <summary>
-        /// Type of compression.
+        /// Gets or sets type of compression.
         /// </summary>  
         public string TiffCompression { get; set; }
 
@@ -56,6 +61,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class TiffSaveOptionsData {\n");
+          sb.Append("  ThresholdForFloydSteinbergDithering: ").Append(this.ThresholdForFloydSteinbergDithering).Append("\n");
           sb.Append("  TiffBinarizationMethod: ").Append(this.TiffBinarizationMethod).Append("\n");
           sb.Append("  TiffCompression: ").Append(this.TiffCompression).Append("\n");
           sb.Append("}\n");

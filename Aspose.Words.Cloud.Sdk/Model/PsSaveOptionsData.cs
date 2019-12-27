@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PsSaveOptionsData.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// container class for ps save options
+  /// container class for ps save options.
   /// </summary>  
   public class PsSaveOptionsData : FixedPageSaveOptionsData 
   {                       
         /// <summary>
-        /// Determines whether the document should be saved using a booklet printing layout
+        /// Gets or sets determines whether the document should be saved using a booklet printing layout.
         /// </summary>  
         public bool? UseBookFoldPrintingSettings { get; set; }
 

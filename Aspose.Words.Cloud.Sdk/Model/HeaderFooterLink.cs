@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="HeaderFooterLink.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,50 +34,50 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// HeaderFooter link element
+  /// HeaderFooter link element.
   /// </summary>  
   public class HeaderFooterLink : LinkElement 
   {                       
         /// <summary>
-        /// Paragraph&#39;s text
+        /// Gets or sets paragraph&#39;s text.
         /// </summary>
-        /// <value>Paragraph&#39;s text</value>
+        /// <value>Gets or sets paragraph&#39;s text.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         { 
             /// <summary>
-            /// Enum HeaderEven for "HeaderEven"
-            /// </summary>            
+            /// Enum value "HeaderEven"
+            /// </summary>
             HeaderEven,
             
             /// <summary>
-            /// Enum HeaderPrimary for "HeaderPrimary"
-            /// </summary>            
+            /// Enum value "HeaderPrimary"
+            /// </summary>
             HeaderPrimary,
             
             /// <summary>
-            /// Enum FooterEven for "FooterEven"
-            /// </summary>            
+            /// Enum value "FooterEven"
+            /// </summary>
             FooterEven,
             
             /// <summary>
-            /// Enum FooterPrimary for "FooterPrimary"
-            /// </summary>            
+            /// Enum value "FooterPrimary"
+            /// </summary>
             FooterPrimary,
             
             /// <summary>
-            /// Enum HeaderFirst for "HeaderFirst"
-            /// </summary>            
+            /// Enum value "HeaderFirst"
+            /// </summary>
             HeaderFirst,
             
             /// <summary>
-            /// Enum FooterFirst for "FooterFirst"
-            /// </summary>            
+            /// Enum value "FooterFirst"
+            /// </summary>
             FooterFirst            
         }
 
         /// <summary>
-        /// Paragraph&#39;s text
+        /// Gets or sets paragraph&#39;s text.
         /// </summary>
         public TypeEnum? Type { get; set; }
 

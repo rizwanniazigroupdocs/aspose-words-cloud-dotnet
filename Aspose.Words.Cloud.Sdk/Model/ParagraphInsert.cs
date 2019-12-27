@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="ParagraphInsert.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Paragraph element
+  /// Paragraph element.
   /// </summary>  
   public class ParagraphInsert 
   {                       
         /// <summary>
-        /// Paragraph's text
+        /// Gets or sets paragraph's text.
         /// </summary>  
         public string Text { get; set; }
 

@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="DrawingObject.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,201 +39,201 @@ namespace Aspose.Words.Cloud.Sdk.Model
   public class DrawingObject : DrawingObjectLink 
   {                       
         /// <summary>
-        /// Specifies where the distance to the image is measured from.             
+        /// Gets or sets specifies where the distance to the image is measured from.             
         /// </summary>
-        /// <value>Specifies where the distance to the image is measured from.             </value>
+        /// <value>Gets or sets specifies where the distance to the image is measured from.             </value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RelativeHorizontalPositionEnum
         { 
             /// <summary>
-            /// Enum Margin for "Margin"
-            /// </summary>            
+            /// Enum value "Margin"
+            /// </summary>
             Margin,
             
             /// <summary>
-            /// Enum Page for "Page"
-            /// </summary>            
+            /// Enum value "Page"
+            /// </summary>
             Page,
             
             /// <summary>
-            /// Enum Column for "Column"
-            /// </summary>            
+            /// Enum value "Column"
+            /// </summary>
             Column,
             
             /// <summary>
-            /// Enum Default for "Default"
-            /// </summary>            
+            /// Enum value "Default"
+            /// </summary>
             Default,
             
             /// <summary>
-            /// Enum Character for "Character"
-            /// </summary>            
+            /// Enum value "Character"
+            /// </summary>
             Character,
             
             /// <summary>
-            /// Enum LeftMargin for "LeftMargin"
-            /// </summary>            
+            /// Enum value "LeftMargin"
+            /// </summary>
             LeftMargin,
             
             /// <summary>
-            /// Enum RightMargin for "RightMargin"
-            /// </summary>            
+            /// Enum value "RightMargin"
+            /// </summary>
             RightMargin,
             
             /// <summary>
-            /// Enum InsideMargin for "InsideMargin"
-            /// </summary>            
+            /// Enum value "InsideMargin"
+            /// </summary>
             InsideMargin,
             
             /// <summary>
-            /// Enum OutsideMargin for "OutsideMargin"
-            /// </summary>            
+            /// Enum value "OutsideMargin"
+            /// </summary>
             OutsideMargin            
         }
 
         /// <summary>
-        /// Specifies where the distance to the image measured from.
+        /// Gets or sets specifies where the distance to the image measured from.
         /// </summary>
-        /// <value>Specifies where the distance to the image measured from.</value>
+        /// <value>Gets or sets specifies where the distance to the image measured from.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RelativeVerticalPositionEnum
         { 
             /// <summary>
-            /// Enum Margin for "Margin"
-            /// </summary>            
+            /// Enum value "Margin"
+            /// </summary>
             Margin,
             
             /// <summary>
-            /// Enum TableDefault for "TableDefault"
-            /// </summary>            
+            /// Enum value "TableDefault"
+            /// </summary>
             TableDefault,
             
             /// <summary>
-            /// Enum Page for "Page"
-            /// </summary>            
+            /// Enum value "Page"
+            /// </summary>
             Page,
             
             /// <summary>
-            /// Enum Paragraph for "Paragraph"
-            /// </summary>            
+            /// Enum value "Paragraph"
+            /// </summary>
             Paragraph,
             
             /// <summary>
-            /// Enum TextFrameDefault for "TextFrameDefault"
-            /// </summary>            
+            /// Enum value "TextFrameDefault"
+            /// </summary>
             TextFrameDefault,
             
             /// <summary>
-            /// Enum Line for "Line"
-            /// </summary>            
+            /// Enum value "Line"
+            /// </summary>
             Line,
             
             /// <summary>
-            /// Enum TopMargin for "TopMargin"
-            /// </summary>            
+            /// Enum value "TopMargin"
+            /// </summary>
             TopMargin,
             
             /// <summary>
-            /// Enum BottomMargin for "BottomMargin"
-            /// </summary>            
+            /// Enum value "BottomMargin"
+            /// </summary>
             BottomMargin,
             
             /// <summary>
-            /// Enum InsideMargin for "InsideMargin"
-            /// </summary>            
+            /// Enum value "InsideMargin"
+            /// </summary>
             InsideMargin,
             
             /// <summary>
-            /// Enum OutsideMargin for "OutsideMargin"
-            /// </summary>            
+            /// Enum value "OutsideMargin"
+            /// </summary>
             OutsideMargin            
         }
 
         /// <summary>
-        /// Specifies how to wrap text around the image.
+        /// Gets or sets specifies how to wrap text around the image.
         /// </summary>
-        /// <value>Specifies how to wrap text around the image.</value>
+        /// <value>Gets or sets specifies how to wrap text around the image.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum WrapTypeEnum
         { 
             /// <summary>
-            /// Enum Inline for "Inline"
-            /// </summary>            
+            /// Enum value "Inline"
+            /// </summary>
             Inline,
             
             /// <summary>
-            /// Enum TopBottom for "TopBottom"
-            /// </summary>            
+            /// Enum value "TopBottom"
+            /// </summary>
             TopBottom,
             
             /// <summary>
-            /// Enum Square for "Square"
-            /// </summary>            
+            /// Enum value "Square"
+            /// </summary>
             Square,
             
             /// <summary>
-            /// Enum None for "None"
-            /// </summary>            
+            /// Enum value "None"
+            /// </summary>
             None,
             
             /// <summary>
-            /// Enum Tight for "Tight"
-            /// </summary>            
+            /// Enum value "Tight"
+            /// </summary>
             Tight,
             
             /// <summary>
-            /// Enum Through for "Through"
-            /// </summary>            
+            /// Enum value "Through"
+            /// </summary>
             Through            
         }
 
         /// <summary>
-        /// Specifies where the distance to the image is measured from.             
+        /// Gets or sets specifies where the distance to the image is measured from.             
         /// </summary>
         public RelativeHorizontalPositionEnum? RelativeHorizontalPosition { get; set; }
 
         /// <summary>
-        /// Specifies where the distance to the image measured from.
+        /// Gets or sets specifies where the distance to the image measured from.
         /// </summary>
         public RelativeVerticalPositionEnum? RelativeVerticalPosition { get; set; }
 
         /// <summary>
-        /// Specifies how to wrap text around the image.
+        /// Gets or sets specifies how to wrap text around the image.
         /// </summary>
         public WrapTypeEnum? WrapType { get; set; }
 
         /// <summary>
-        /// Height of the drawing object in points.
+        /// Gets or sets height of the drawing object in points.
         /// </summary>  
         public double? Height { get; set; }
 
         /// <summary>
-        /// Link to image data. Can be null if shape does not have an image.
+        /// Gets or sets link to image data. Can be null if shape does not have an image.
         /// </summary>  
         public WordsApiLink ImageDataLink { get; set; }
 
         /// <summary>
-        /// Distance in points from the origin to the left side of the image.             
+        /// Gets or sets distance in points from the origin to the left side of the image.             
         /// </summary>  
         public double? Left { get; set; }
 
         /// <summary>
-        /// Link to ole object. Can be null if shape does not have ole data.
+        /// Gets or sets link to ole object. Can be null if shape does not have ole data.
         /// </summary>  
         public WordsApiLink OleDataLink { get; set; }
 
         /// <summary>
-        /// A list of links that originate from this .
+        /// Gets or sets a list of links that originate from this .
         /// </summary>  
         public List<WordsApiLink> RenderLinks { get; set; }
 
         /// <summary>
-        /// Distance in points from the origin to the top side of the image.
+        /// Gets or sets distance in points from the origin to the top side of the image.
         /// </summary>  
         public double? Top { get; set; }
 
         /// <summary>
-        /// Width of the drawing objects in points.
+        /// Gets or sets width of the drawing objects in points.
         /// </summary>  
         public double? Width { get; set; }
 

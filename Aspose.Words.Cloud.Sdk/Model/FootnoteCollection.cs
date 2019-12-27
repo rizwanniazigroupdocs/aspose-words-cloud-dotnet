@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="FootnoteCollection.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,7 +39,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
   public class FootnoteCollection : LinkElement 
   {                       
         /// <summary>
-        /// Collection of foonotes links 
+        /// Gets or sets collection of foonotes links.
         /// </summary>  
         public List<Footnote> List { get; set; }
 

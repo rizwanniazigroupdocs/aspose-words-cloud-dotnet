@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="SectionLinkCollection.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Collection of links to sections
+  /// Collection of links to sections.
   /// </summary>  
   public class SectionLinkCollection : LinkElement 
   {                       
         /// <summary>
-        /// Collection of section's links
+        /// Gets or sets collection of section's links.
         /// </summary>  
         public List<SectionLink> SectionLinkList { get; set; }
 

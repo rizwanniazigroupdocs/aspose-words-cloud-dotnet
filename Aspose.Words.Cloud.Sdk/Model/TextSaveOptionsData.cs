@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="TextSaveOptionsData.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,32 +39,60 @@ namespace Aspose.Words.Cloud.Sdk.Model
   public class TextSaveOptionsData : SaveOptionsData 
   {                       
         /// <summary>
-        /// Specifies the encoding to use when exporting in plain text format
+        /// Gets or sets specifies whether to output headers and footers when exporting in plain text format. default value is TxtExportHeadersFootersMode.PrimaryOnly.
+        /// </summary>
+        /// <value>Gets or sets specifies whether to output headers and footers when exporting in plain text format. default value is TxtExportHeadersFootersMode.PrimaryOnly.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ExportHeadersFootersModeEnum
+        { 
+            /// <summary>
+            /// Enum value "None"
+            /// </summary>
+            None,
+            
+            /// <summary>
+            /// Enum value "PrimaryOnly"
+            /// </summary>
+            PrimaryOnly,
+            
+            /// <summary>
+            /// Enum value "AllAtEnd"
+            /// </summary>
+            AllAtEnd            
+        }
+
+        /// <summary>
+        /// Gets or sets specifies whether to output headers and footers when exporting in plain text format. default value is TxtExportHeadersFootersMode.PrimaryOnly.
+        /// </summary>
+        public ExportHeadersFootersModeEnum? ExportHeadersFootersMode { get; set; }
+
+        /// <summary>
+        /// Gets or sets specifies whether to add bi-directional marks before each BiDi run when exporting in plain text format. The default value is true.
+        /// </summary>  
+        public bool? AddBidiMarks { get; set; }
+
+        /// <summary>
+        /// Gets or sets specifies the encoding to use when exporting in plain text format.
         /// </summary>  
         public string Encoding { get; set; }
 
         /// <summary>
-        /// Specifies whether to output headers and footers when exporting in plain text format
-        /// </summary>  
-        public bool? ExportHeadersFooters { get; set; }
-
-        /// <summary>
-        /// Allows to specify whether the page breaks should be preserved during export. The default value is false.
+        /// Gets or sets allows to specify whether the page breaks should be preserved during export. The default value is false.
         /// </summary>  
         public bool? ForcePageBreaks { get; set; }
 
         /// <summary>
-        /// Specifies the string to use as a paragraph break when exporting in plain text format
+        /// Gets or sets specifies the string to use as a paragraph break when exporting in plain text format.
         /// </summary>  
         public string ParagraphBreak { get; set; }
 
         /// <summary>
-        /// Specifies whether the program should attempt to preserve layout of tables when saving in the plain text format
+        /// Gets or sets specifies whether the program should attempt to preserve layout of tables when saving in the plain text format.
         /// </summary>  
         public bool? PreserveTableLayout { get; set; }
 
         /// <summary>
-        /// Specifies whether the program should simplify list labels in case of complex label formatting not being adequately represented by plain text
+        /// Gets or sets specifies whether the program should simplify list labels in case of complex label formatting not being adequately represented by plain text.
         /// </summary>  
         public bool? SimplifyListLabels { get; set; }
 
@@ -76,8 +104,9 @@ namespace Aspose.Words.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class TextSaveOptionsData {\n");
+          sb.Append("  AddBidiMarks: ").Append(this.AddBidiMarks).Append("\n");
           sb.Append("  Encoding: ").Append(this.Encoding).Append("\n");
-          sb.Append("  ExportHeadersFooters: ").Append(this.ExportHeadersFooters).Append("\n");
+          sb.Append("  ExportHeadersFootersMode: ").Append(this.ExportHeadersFootersMode).Append("\n");
           sb.Append("  ForcePageBreaks: ").Append(this.ForcePageBreaks).Append("\n");
           sb.Append("  ParagraphBreak: ").Append(this.ParagraphBreak).Append("\n");
           sb.Append("  PreserveTableLayout: ").Append(this.PreserveTableLayout).Append("\n");

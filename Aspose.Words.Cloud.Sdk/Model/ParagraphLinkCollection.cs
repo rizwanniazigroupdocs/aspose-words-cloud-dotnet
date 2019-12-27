@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="ParagraphLinkCollection.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Collection of links to paragraphs
+  /// Collection of links to paragraphs.
   /// </summary>  
   public class ParagraphLinkCollection : LinkElement 
   {                       
         /// <summary>
-        /// Collection of paragraph's links
+        /// Gets or sets collection of paragraph's links.
         /// </summary>  
         public List<ParagraphLink> ParagraphLinkList { get; set; }
 

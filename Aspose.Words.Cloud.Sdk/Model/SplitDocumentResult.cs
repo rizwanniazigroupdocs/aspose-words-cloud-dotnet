@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="SplitDocumentResult.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,17 +39,17 @@ namespace Aspose.Words.Cloud.Sdk.Model
   public class SplitDocumentResult 
   {                       
         /// <summary>
-        /// Linkt to the source document.
+        /// Gets or sets linkt to the source document.
         /// </summary>  
         public FileLink SourceDocument { get; set; }
 
         /// <summary>
-        /// Array of pages.
+        /// Gets or sets array of pages.
         /// </summary>  
         public List<FileLink> Pages { get; set; }
 
         /// <summary>
-        /// Link to the file archive with pages.
+        /// Gets or sets link to the file archive with pages.
         /// </summary>  
         public FileLink ZippedPages { get; set; }
 

@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="Document.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,145 +39,145 @@ namespace Aspose.Words.Cloud.Sdk.Model
   public class Document 
   {                       
         /// <summary>
-        /// Gets the original format of the document.
+        /// Gets or sets the original format of the document.
         /// </summary>
-        /// <value>Gets the original format of the document.</value>
+        /// <value>Gets or sets the original format of the document.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SourceFormatEnum
         { 
             /// <summary>
-            /// Enum Unknown for "Unknown"
-            /// </summary>            
+            /// Enum value "Unknown"
+            /// </summary>
             Unknown,
             
             /// <summary>
-            /// Enum Doc for "Doc"
-            /// </summary>            
+            /// Enum value "Doc"
+            /// </summary>
             Doc,
             
             /// <summary>
-            /// Enum Dot for "Dot"
-            /// </summary>            
+            /// Enum value "Dot"
+            /// </summary>
             Dot,
             
             /// <summary>
-            /// Enum DocPreWord60 for "DocPreWord60"
-            /// </summary>            
+            /// Enum value "DocPreWord60"
+            /// </summary>
             DocPreWord60,
             
             /// <summary>
-            /// Enum Docx for "Docx"
-            /// </summary>            
+            /// Enum value "Docx"
+            /// </summary>
             Docx,
             
             /// <summary>
-            /// Enum Docm for "Docm"
-            /// </summary>            
+            /// Enum value "Docm"
+            /// </summary>
             Docm,
             
             /// <summary>
-            /// Enum Dotx for "Dotx"
-            /// </summary>            
+            /// Enum value "Dotx"
+            /// </summary>
             Dotx,
             
             /// <summary>
-            /// Enum Dotm for "Dotm"
-            /// </summary>            
+            /// Enum value "Dotm"
+            /// </summary>
             Dotm,
             
             /// <summary>
-            /// Enum FlatOpc for "FlatOpc"
-            /// </summary>            
+            /// Enum value "FlatOpc"
+            /// </summary>
             FlatOpc,
             
             /// <summary>
-            /// Enum Rtf for "Rtf"
-            /// </summary>            
+            /// Enum value "Rtf"
+            /// </summary>
             Rtf,
             
             /// <summary>
-            /// Enum WordML for "WordML"
-            /// </summary>            
+            /// Enum value "WordML"
+            /// </summary>
             WordML,
             
             /// <summary>
-            /// Enum Html for "Html"
-            /// </summary>            
+            /// Enum value "Html"
+            /// </summary>
             Html,
             
             /// <summary>
-            /// Enum Mhtml for "Mhtml"
-            /// </summary>            
+            /// Enum value "Mhtml"
+            /// </summary>
             Mhtml,
             
             /// <summary>
-            /// Enum Epub for "Epub"
-            /// </summary>            
+            /// Enum value "Epub"
+            /// </summary>
             Epub,
             
             /// <summary>
-            /// Enum Text for "Text"
-            /// </summary>            
+            /// Enum value "Text"
+            /// </summary>
             Text,
             
             /// <summary>
-            /// Enum Odt for "Odt"
-            /// </summary>            
+            /// Enum value "Odt"
+            /// </summary>
             Odt,
             
             /// <summary>
-            /// Enum Ott for "Ott"
-            /// </summary>            
+            /// Enum value "Ott"
+            /// </summary>
             Ott,
             
             /// <summary>
-            /// Enum Pdf for "Pdf"
-            /// </summary>            
+            /// Enum value "Pdf"
+            /// </summary>
             Pdf,
             
             /// <summary>
-            /// Enum Xps for "Xps"
-            /// </summary>            
+            /// Enum value "Xps"
+            /// </summary>
             Xps,
             
             /// <summary>
-            /// Enum Tiff for "Tiff"
-            /// </summary>            
+            /// Enum value "Tiff"
+            /// </summary>
             Tiff,
             
             /// <summary>
-            /// Enum Svg for "Svg"
-            /// </summary>            
+            /// Enum value "Svg"
+            /// </summary>
             Svg            
         }
 
         /// <summary>
-        /// Gets the original format of the document.
+        /// Gets or sets the original format of the document.
         /// </summary>
         public SourceFormatEnum? SourceFormat { get; set; }
 
         /// <summary>
-        /// A list of links that originate from this document.
+        /// Gets or sets a list of links that originate from this document.
         /// </summary>  
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Gets the name of the file.
+        /// Gets or sets the name of the file.
         /// </summary>  
         public string FileName { get; set; }
 
         /// <summary>
-        /// Returns true if the document is encrypted and requires a password to open. 
+        /// Gets or sets a value indicating whether returns true if the document is encrypted and requires a password to open.
         /// </summary>  
         public bool? IsEncrypted { get; set; }
 
         /// <summary>
-        /// Returns true if the document contains a digital signature. This property merely informs that a  digital signature is present on a document, but it does not specify whether the signature is valid or not. 
+        /// Gets or sets a value indicating whether returns true if the document contains a digital signature. This property merely informs that a digital signature is present on a document, but it does not specify whether the signature is valid or not.
         /// </summary>  
         public bool? IsSigned { get; set; }
 
         /// <summary>
-        /// Returns document properties.
+        /// Gets or sets returns document properties.
         /// </summary>  
         public DocumentProperties DocumentProperties { get; set; }
 

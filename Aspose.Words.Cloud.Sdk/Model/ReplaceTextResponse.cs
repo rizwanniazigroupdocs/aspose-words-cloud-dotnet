@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="ReplaceTextResponse.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,15 +36,15 @@ namespace Aspose.Words.Cloud.Sdk.Model
   /// <summary>
   /// Response for \&quot;Replace text\&quot; action.
   /// </summary>  
-  public class ReplaceTextResponse : AsposeResponse 
+  public class ReplaceTextResponse : WordsResponse 
   {                       
         /// <summary>
-        /// Link to the document.
+        /// Gets or sets link to the document.
         /// </summary>  
         public FileLink DocumentLink { get; set; }
 
         /// <summary>
-        /// Number of occurrences of the captured text in the document.
+        /// Gets or sets number of occurrences of the captured text in the document.
         /// </summary>  
         public int? Matches { get; set; }
 

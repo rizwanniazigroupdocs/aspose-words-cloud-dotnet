@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="ClassificationResponse.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,22 +34,22 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// This response should be returned by the service when handling: PUT http://api.aspose.com/v1.1/words/classify
+  /// This response should be returned by the service when handling: PUT http://api.aspose.com/v4.0/words/classify.
   /// </summary>  
-  public class ClassificationResponse : AsposeResponse 
+  public class ClassificationResponse : WordsResponse 
   {                       
         /// <summary>
-        /// Best class name.        
+        /// Gets or sets best class name.
         /// </summary>  
         public string BestClassName { get; set; }
 
         /// <summary>
-        /// Best class probability.
+        /// Gets or sets best class probability.
         /// </summary>  
         public double? BestClassProbability { get; set; }
 
         /// <summary>
-        /// Array of best classes results.
+        /// Gets or sets array of best classes results.
         /// </summary>  
         public List<ClassificationResult> BestResults { get; set; }
 

@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="BookmarksResponse.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,10 +36,10 @@ namespace Aspose.Words.Cloud.Sdk.Model
   /// <summary>
   /// This response should be returned by the service when handling:  GET bookmarks.
   /// </summary>  
-  public class BookmarksResponse : AsposeResponse 
+  public class BookmarksResponse : WordsResponse 
   {                       
         /// <summary>
-        /// Bookmarks which are contained in document.
+        /// Gets or sets bookmarks which are contained in document.
         /// </summary>  
         public Bookmarks Bookmarks { get; set; }
 

@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="EpubSaveOptionsData.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,7 +39,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
   public class EpubSaveOptionsData : HtmlSaveOptionsData 
   {                       
         /// <summary>
-        /// Specifies the maximum level of headings populated to the navigation map when exporting
+        /// Gets or sets specifies the maximum level of headings populated to the navigation map when exporting.
         /// </summary>  
         public int? EpubNavigationMapLevel { get; set; }
 

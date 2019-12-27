@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="RtfSaveOptionsData.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,22 +34,22 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// container class for rtf save options
+  /// container class for rtf save options.
   /// </summary>  
   public class RtfSaveOptionsData : SaveOptionsData 
   {                       
         /// <summary>
-        /// Allows to make output RTF documents smaller in size, but if they contain RTL (right-to-left) text, it will not be displayed correctly
+        /// Gets or sets allows to make output RTF documents smaller in size, but if they contain RTL (right-to-left) text, it will not be displayed correctly.
         /// </summary>  
         public bool? ExportCompactSize { get; set; }
 
         /// <summary>
-        /// Specifies whether the keywords for \"old readers\" are written to RTF or not
+        /// Gets or sets specifies whether the keywords for \"old readers\" are written to RTF or not.
         /// </summary>  
         public bool? ExportImagesForOldReaders { get; set; }
 
         /// <summary>
-        /// Specifies whether or not use pretty formats output
+        /// Gets or sets specifies whether or not use pretty formats output.
         /// </summary>  
         public bool? PrettyFormat { get; set; }
 

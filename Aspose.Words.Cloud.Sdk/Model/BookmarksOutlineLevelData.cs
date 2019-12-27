@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="BookmarksOutlineLevelData.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,17 +34,17 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// container class for individual bookmarks outline level
+  /// container class for individual bookmarks outline level.
   /// </summary>  
   public class BookmarksOutlineLevelData 
   {                       
         /// <summary>
-        /// Specify the bookmark's name
+        /// Gets or sets specify the bookmark's name.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Specify the bookmark's level
+        /// Gets or sets specify the bookmark's level.
         /// </summary>  
         public int? BookmarksOutlineLevel { get; set; }
 

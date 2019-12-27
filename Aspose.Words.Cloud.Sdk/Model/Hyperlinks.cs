@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="Hyperlinks.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,7 +39,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
   public class Hyperlinks : LinkElement 
   {                       
         /// <summary>
-        /// Array of .
+        /// Gets or sets array of .
         /// </summary>  
         public List<Hyperlink> HyperlinkList { get; set; }
 

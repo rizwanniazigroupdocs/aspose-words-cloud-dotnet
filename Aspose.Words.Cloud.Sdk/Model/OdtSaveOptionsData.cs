@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="OdtSaveOptionsData.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,40 +34,40 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// container class for odt/ott save options
+  /// container class for odt/ott save options.
   /// </summary>  
   public class OdtSaveOptionsData : SaveOptionsData 
   {                       
         /// <summary>
-        /// Allows to specify units of measure to apply to document content. The default value is Aspose.Words.Saving.OdtSaveMeasureUnit.Centimeters  Open Office uses centimeters when specifying lengths, widths and other measurable formatting and content properties in documents whereas MS Office uses inches.
+        /// Gets or sets allows to specify units of measure to apply to document content. The default value is Aspose.Words.Saving.OdtSaveMeasureUnit.Centimeters.  Open Office uses centimeters when specifying lengths, widths and other measurable formatting and content properties in documents whereas MS Office uses inches.
         /// </summary>
-        /// <value>Allows to specify units of measure to apply to document content. The default value is Aspose.Words.Saving.OdtSaveMeasureUnit.Centimeters  Open Office uses centimeters when specifying lengths, widths and other measurable formatting and content properties in documents whereas MS Office uses inches.</value>
+        /// <value>Gets or sets allows to specify units of measure to apply to document content. The default value is Aspose.Words.Saving.OdtSaveMeasureUnit.Centimeters.  Open Office uses centimeters when specifying lengths, widths and other measurable formatting and content properties in documents whereas MS Office uses inches.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MeasureUnitEnum
         { 
             /// <summary>
-            /// Enum Centimeters for "Centimeters"
-            /// </summary>            
+            /// Enum value "Centimeters"
+            /// </summary>
             Centimeters,
             
             /// <summary>
-            /// Enum Inches for "Inches"
-            /// </summary>            
+            /// Enum value "Inches"
+            /// </summary>
             Inches            
         }
 
         /// <summary>
-        /// Allows to specify units of measure to apply to document content. The default value is Aspose.Words.Saving.OdtSaveMeasureUnit.Centimeters  Open Office uses centimeters when specifying lengths, widths and other measurable formatting and content properties in documents whereas MS Office uses inches.
+        /// Gets or sets allows to specify units of measure to apply to document content. The default value is Aspose.Words.Saving.OdtSaveMeasureUnit.Centimeters.  Open Office uses centimeters when specifying lengths, widths and other measurable formatting and content properties in documents whereas MS Office uses inches.
         /// </summary>
         public MeasureUnitEnum? MeasureUnit { get; set; }
 
         /// <summary>
-        /// Specifies whether export should correspond to ODT specification 1.1 strictly
+        /// Gets or sets specifies whether export should correspond to ODT specification 1.1 strictly.
         /// </summary>  
         public bool? IsStrictSchema11 { get; set; }
 
         /// <summary>
-        /// Specifies whether or not use pretty formats output
+        /// Gets or sets specifies whether or not use pretty formats output.
         /// </summary>  
         public bool? PrettyFormat { get; set; }
 

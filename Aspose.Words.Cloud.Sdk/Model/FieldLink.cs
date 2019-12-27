@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="FieldLink.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Field link
+  /// Field link.
   /// </summary>  
   public class FieldLink : NodeLink 
   {                       
         /// <summary>
-        /// Field code
+        /// Gets or sets field code.
         /// </summary>  
         public string FieldCode { get; set; }
 

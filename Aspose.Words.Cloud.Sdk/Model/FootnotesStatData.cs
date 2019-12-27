@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="FootnotesStatData.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,17 +34,17 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Container for the footnotes statistical data
+  /// Container for the footnotes statistical data.
   /// </summary>  
   public class FootnotesStatData 
   {                       
         /// <summary>
-        /// Total count of words in footnotes
+        /// Gets or sets total count of words in footnotes.
         /// </summary>  
         public int? WordCount { get; set; }
 
         /// <summary>
-        /// Total count of paragraphs in footnotes
+        /// Gets or sets total count of paragraphs in footnotes.
         /// </summary>  
         public int? ParagraphCount { get; set; }
 

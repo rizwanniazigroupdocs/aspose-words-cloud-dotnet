@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PreferredWidth.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,30 +39,30 @@ namespace Aspose.Words.Cloud.Sdk.Model
   public class PreferredWidth 
   {                       
         /// <summary>
-        /// Gets the unit of measure used for this preferred width value.
+        /// Gets or sets the unit of measure used for this preferred width value.
         /// </summary>
-        /// <value>Gets the unit of measure used for this preferred width value.</value>
+        /// <value>Gets or sets the unit of measure used for this preferred width value.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TypeEnum
         { 
             /// <summary>
-            /// Enum Auto for "Auto"
-            /// </summary>            
+            /// Enum value "Auto"
+            /// </summary>
             Auto,
             
             /// <summary>
-            /// Enum Percent for "Percent"
-            /// </summary>            
+            /// Enum value "Percent"
+            /// </summary>
             Percent,
             
             /// <summary>
-            /// Enum Points for "Points"
-            /// </summary>            
+            /// Enum value "Points"
+            /// </summary>
             Points            
         }
 
         /// <summary>
-        /// Gets the unit of measure used for this preferred width value.
+        /// Gets or sets the unit of measure used for this preferred width value.
         /// </summary>
         public TypeEnum? Type { get; set; }
 

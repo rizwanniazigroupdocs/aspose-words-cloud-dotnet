@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="DocSaveOptionsData.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,17 +34,27 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// container class for doc/dot save options
+  /// container class for doc/dot save options.
   /// </summary>  
   public class DocSaveOptionsData : SaveOptionsData 
   {                       
         /// <summary>
-        /// Password
+        /// Gets or sets When false, small metafiles are not compressed for performance reason. Default value is true, all metafiles are compressed regardless of its size.
+        /// </summary>  
+        public bool? AlwaysCompressMetafiles { get; set; }
+
+        /// <summary>
+        /// Gets or sets password.
         /// </summary>  
         public string Password { get; set; }
 
         /// <summary>
-        /// Determine whether or not save RoutingSlip data saved to output document
+        /// Gets or sets When false, PictureBullet data is not saved to output document. Default value is true.
+        /// </summary>  
+        public bool? SavePictureBullet { get; set; }
+
+        /// <summary>
+        /// Gets or sets determine whether or not save RoutingSlip data saved to output document.
         /// </summary>  
         public bool? SaveRoutingSlip { get; set; }
 
@@ -56,7 +66,9 @@ namespace Aspose.Words.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class DocSaveOptionsData {\n");
+          sb.Append("  AlwaysCompressMetafiles: ").Append(this.AlwaysCompressMetafiles).Append("\n");
           sb.Append("  Password: ").Append(this.Password).Append("\n");
+          sb.Append("  SavePictureBullet: ").Append(this.SavePictureBullet).Append("\n");
           sb.Append("  SaveRoutingSlip: ").Append(this.SaveRoutingSlip).Append("\n");
           sb.Append("}\n");
           return sb.ToString();

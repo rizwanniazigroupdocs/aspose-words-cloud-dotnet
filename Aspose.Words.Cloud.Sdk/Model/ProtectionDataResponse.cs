@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="ProtectionDataResponse.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,17 +34,17 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Response for the request of data about protection
+  /// Response for the request of data about protection.
   /// </summary>  
-  public class ProtectionDataResponse : AsposeResponse 
+  public class ProtectionDataResponse : WordsResponse 
   {                       
         /// <summary>
-        /// Link to the document
+        /// Gets or sets link to the document.
         /// </summary>  
         public FileLink DocumentLink { get; set; }
 
         /// <summary>
-        /// Protection's data of the document
+        /// Gets or sets protection's data of the document.
         /// </summary>  
         public ProtectionData ProtectionData { get; set; }
 

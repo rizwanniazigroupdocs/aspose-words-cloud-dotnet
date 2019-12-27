@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="FormFieldDropDown.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// FormField dropdownlist element
+  /// FormField dropdownlist element.
   /// </summary>  
   public class FormFieldDropDown : FormField 
   {                       
         /// <summary>
-        /// Provides access to the items of a dropdown form field.
+        /// Gets or sets provides access to the items of a dropdown form field.
         /// </summary>  
         public List<string> DropDownItems { get; set; }
 

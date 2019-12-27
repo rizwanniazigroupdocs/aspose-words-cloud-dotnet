@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="FormFieldTextInput.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// FormField text input element
+  /// FormField text input element.
   /// </summary>  
   public class FormFieldTextInput : FormField 
   {                       
@@ -46,33 +46,33 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public enum TextInputTypeEnum
         { 
             /// <summary>
-            /// Enum Regular for "Regular"
-            /// </summary>            
+            /// Enum value "Regular"
+            /// </summary>
             Regular,
             
             /// <summary>
-            /// Enum Number for "Number"
-            /// </summary>            
+            /// Enum value "Number"
+            /// </summary>
             Number,
             
             /// <summary>
-            /// Enum Date for "Date"
-            /// </summary>            
+            /// Enum value "Date"
+            /// </summary>
             Date,
             
             /// <summary>
-            /// Enum CurrentDate for "CurrentDate"
-            /// </summary>            
+            /// Enum value "CurrentDate"
+            /// </summary>
             CurrentDate,
             
             /// <summary>
-            /// Enum CurrentTime for "CurrentTime"
-            /// </summary>            
+            /// Enum value "CurrentTime"
+            /// </summary>
             CurrentTime,
             
             /// <summary>
-            /// Enum Calculated for "Calculated"
-            /// </summary>            
+            /// Enum value "Calculated"
+            /// </summary>
             Calculated            
         }
 
@@ -82,17 +82,17 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public TextInputTypeEnum? TextInputType { get; set; }
 
         /// <summary>
-        /// Maximum length for the text field. Zero when the length is not limited.
+        /// Gets or sets maximum length for the text field. Zero when the length is not limited.
         /// </summary>  
         public int? MaxLength { get; set; }
 
         /// <summary>
-        /// Gets or sets the default string or a calculation expression of a text form field. 
+        /// Gets or sets the default string or a calculation expression of a text form field.
         /// </summary>  
         public string TextInputDefault { get; set; }
 
         /// <summary>
-        /// Returns or sets the text formatting for a text form field.
+        /// Gets or sets returns or sets the text formatting for a text form field.
         /// </summary>  
         public string TextInputFormat { get; set; }
 

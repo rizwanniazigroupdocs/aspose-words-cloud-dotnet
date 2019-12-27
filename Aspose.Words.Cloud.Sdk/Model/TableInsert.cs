@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="TableInsert.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,22 +34,22 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Table element
+  /// Table element.
   /// </summary>  
   public class TableInsert 
   {                       
         /// <summary>
-        /// Table will be inserted before specified position.
+        /// Gets or sets table will be inserted before specified position.
         /// </summary>  
-        public DocumentPosition Postion { get; set; }
+        public DocumentPosition Position { get; set; }
 
         /// <summary>
-        /// Count of columns. Default is 2.
+        /// Gets or sets count of columns. Default is 2.
         /// </summary>  
         public int? ColumnsCount { get; set; }
 
         /// <summary>
-        /// Count of rows. Default is 2.
+        /// Gets or sets count of rows. Default is 2.
         /// </summary>  
         public int? RowsCount { get; set; }
 
@@ -61,7 +61,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class TableInsert {\n");
-          sb.Append("  Postion: ").Append(this.Postion).Append("\n");
+          sb.Append("  Position: ").Append(this.Position).Append("\n");
           sb.Append("  ColumnsCount: ").Append(this.ColumnsCount).Append("\n");
           sb.Append("  RowsCount: ").Append(this.RowsCount).Append("\n");
           sb.Append("}\n");

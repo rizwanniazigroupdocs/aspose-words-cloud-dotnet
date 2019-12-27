@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="TableRowInsert.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,17 +34,17 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Table row element
+  /// Table row element.
   /// </summary>  
   public class TableRowInsert 
   {                       
         /// <summary>
-        /// Table row will be inserted after row with specified 0-based index.
+        /// Gets or sets table row will be inserted after row with specified 0-based index.
         /// </summary>  
         public int? InsertAfter { get; set; }
 
         /// <summary>
-        /// Count of columns. Default is 1.
+        /// Gets or sets count of columns. Default is 1.
         /// </summary>  
         public int? ColumnsCount { get; set; }
 

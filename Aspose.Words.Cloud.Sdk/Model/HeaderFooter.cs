@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="HeaderFooter.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,17 +34,22 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Section element
+  /// Section element.
   /// </summary>  
   public class HeaderFooter : HeaderFooterLink 
   {                       
         /// <summary>
-        /// Link to DrawingObjects resource
+        /// Gets or sets child nodes.
+        /// </summary>  
+        public List<NodeLink> ChildNodes { get; set; }
+
+        /// <summary>
+        /// Gets or sets link to DrawingObjects resource.
         /// </summary>  
         public LinkElement DrawingObjects { get; set; }
 
         /// <summary>
-        /// Link to Paragraphs resource
+        /// Gets or sets link to Paragraphs resource.
         /// </summary>  
         public LinkElement Paragraphs { get; set; }
 
@@ -56,6 +61,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class HeaderFooter {\n");
+          sb.Append("  ChildNodes: ").Append(this.ChildNodes).Append("\n");
           sb.Append("  DrawingObjects: ").Append(this.DrawingObjects).Append("\n");
           sb.Append("  Paragraphs: ").Append(this.Paragraphs).Append("\n");
           sb.Append("}\n");

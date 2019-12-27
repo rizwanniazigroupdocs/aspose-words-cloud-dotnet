@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="LoadWebDocumentData.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,17 +34,17 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Contains data for load web document
+  /// Contains data for load web document.
   /// </summary>  
   public class LoadWebDocumentData 
   {                       
         /// <summary>
-        /// Web document url
+        /// Gets or sets web document url.
         /// </summary>  
         public string LoadingDocumentUrl { get; set; }
 
         /// <summary>
-        /// Save options
+        /// Gets or sets save options.
         /// </summary>  
         public SaveOptionsData SaveOptions { get; set; }
 

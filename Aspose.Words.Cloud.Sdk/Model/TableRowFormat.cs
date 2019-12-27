@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="TableRowFormat.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,18 +46,18 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public enum HeightRuleEnum
         { 
             /// <summary>
-            /// Enum AtLeast for "AtLeast"
-            /// </summary>            
+            /// Enum value "AtLeast"
+            /// </summary>
             AtLeast,
             
             /// <summary>
-            /// Enum Exactly for "Exactly"
-            /// </summary>            
+            /// Enum value "Exactly"
+            /// </summary>
             Exactly,
             
             /// <summary>
-            /// Enum Auto for "Auto"
-            /// </summary>            
+            /// Enum value "Auto"
+            /// </summary>
             Auto            
         }
 
@@ -67,12 +67,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public HeightRuleEnum? HeightRule { get; set; }
 
         /// <summary>
-        /// True if the text in a table row is allowed to split across a page break.
+        /// Gets or sets true if the text in a table row is allowed to split across a page break.
         /// </summary>  
         public bool? AllowBreakAcrossPages { get; set; }
 
         /// <summary>
-        /// True if the row is repeated as a table heading on every page when the table spans more than one page.
+        /// Gets or sets true if the row is repeated as a table heading on every page when the table spans more than one page.
         /// </summary>  
         public bool? HeadingFormat { get; set; }
 

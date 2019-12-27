@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="StoryChildNodes.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Child nodes of  or 
+  /// Child nodes of  or .
   /// </summary>  
   public class StoryChildNodes 
   {                       
         /// <summary>
-        /// Child nodes.
+        /// Gets or sets child nodes.
         /// </summary>  
         public List<NodeLink> ChildNodes { get; set; }
 

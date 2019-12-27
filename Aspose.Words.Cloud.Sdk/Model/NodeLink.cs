@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="NodeLink.cs">
-//   Copyright (c) 2018 Aspose.Words for Cloud
+//   Copyright (c) 2019 Aspose.Words for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +34,12 @@ namespace Aspose.Words.Cloud.Sdk.Model
   using Newtonsoft.Json.Converters;
 
   /// <summary>
-  /// Reference to node
+  /// Reference to node.
   /// </summary>  
   public class NodeLink : LinkElement 
   {                       
         /// <summary>
-        /// Node id
+        /// Gets or sets node id.
         /// </summary>  
         public string NodeId { get; set; }
 
