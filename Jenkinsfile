@@ -9,7 +9,7 @@ properties([
 
 ])
 
-node('windows2019') {
+node('windows2016') {
 	try {
 		gitlabCommitStatus("checkout") {
 			stage('checkout'){
