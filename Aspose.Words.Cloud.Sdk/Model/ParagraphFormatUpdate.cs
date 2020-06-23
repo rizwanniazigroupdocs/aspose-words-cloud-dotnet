@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="TextSaveOptionsData.cs">
+// <copyright company="Aspose" file="ParagraphFormatUpdate.cs">
 //   Copyright (c) 2020 Aspose.Words for Cloud
 // </copyright>
 // <summary>
@@ -34,26 +34,10 @@ namespace Aspose.Words.Cloud.Sdk.Model
     using Newtonsoft.Json.Converters;
 
     /// <summary>
-    /// Container class for text save options.
+    /// Paragraph format element update DTO.
     /// </summary>
-    public class TextSaveOptionsData : TxtSaveOptionsBaseData
+    public class ParagraphFormatUpdate : ParagraphFormatBase
     {
-        /// <summary>
-        /// Gets or sets specifies whether to add bi-directional marks before each BiDi run when exporting in plain text format.
-        /// The default value is true.
-        /// </summary>  
-        public bool? AddBidiMarks { get; set; }
-
-        /// <summary>
-        /// Gets or sets specifies whether the program should attempt to preserve layout of tables when saving in the plain text format.
-        /// </summary>  
-        public bool? PreserveTableLayout { get; set; }
-
-        /// <summary>
-        /// Gets or sets specifies whether the program should simplify list labels in case of complex label formatting not being adequately represented by plain text.
-        /// </summary>  
-        public bool? SimplifyListLabels { get; set; }
-
         /// <summary>
         /// Get the string presentation of the object.
         /// </summary>
@@ -61,10 +45,7 @@ namespace Aspose.Words.Cloud.Sdk.Model
         public override string ToString()  
         {
             var sb = new StringBuilder();
-            sb.Append("class TextSaveOptionsData {\n");
-            sb.Append("  AddBidiMarks: ").Append(this.AddBidiMarks).Append("\n");
-            sb.Append("  PreserveTableLayout: ").Append(this.PreserveTableLayout).Append("\n");
-            sb.Append("  SimplifyListLabels: ").Append(this.SimplifyListLabels).Append("\n");
+            sb.Append("class ParagraphFormatUpdate {\n");
             sb.Append("}\n");
             return sb.ToString();
         }
