@@ -117,6 +117,24 @@ The complete source code is available at [GitHub Repository](https://github.com/
 
 ```csharp
             // Start README example
+            var config = new Configuration
+            {
+                AppSid = appSid,
+                AppKey = appKey,
+                ApiBaseUrl = baseUrl,
+            };
+
+            var wordsApi = new WordsApi(config);
+
+            using (var inputStream = new FileStream(pathToDocFile, FileMode.Open))
+            {
+                var uploadFileRequest = new UploadFileRequest(inputStream, "fileStoredInCloud.doc");
+                wordsApi.UploadFile(uploadFileRequest);
+            }
+
+            var saveOptionsData = new SaveOptionsData { SaveFormat = "pdf", FileName = "destStoredInCloud.pdf" };
+            var request = new SaveAsRequest("fileStoredInCloud.doc", saveOptionsData);
+            wordsApi.SaveAs(request);
 
             // End README example
 ```
