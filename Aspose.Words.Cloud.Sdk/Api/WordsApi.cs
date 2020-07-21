@@ -174,6 +174,53 @@ namespace Aspose.Words.Cloud.Sdk
         }
 
         /// <summary>
+        /// Appends documents to original document.
+        /// </summary>
+        /// <param name="request">Request. <see cref="AppendDocumentOnlineRequest" /></param>
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream AppendDocumentOnline(AppendDocumentOnlineRequest request)
+        {
+            // verify the required parameter 'document' is set
+            if (request.Document == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling AppendDocumentOnline");
+            }
+
+            // verify the required parameter 'documentList' is set
+            if (request.DocumentList == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'documentList' when calling AppendDocumentOnline");
+            }
+
+            // create path and map variables
+            var resourcePath = this.configuration.GetApiRootUrl() + "/words/online/appendDocument";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+
+            var formParams = new Dictionary<string, object>();
+            if (request.Document != null) 
+            {
+                formParams.Add("document", this.apiInvoker.ToFileInfo(request.Document, "Document"));
+            }
+
+            if (request.DocumentList != null) 
+            {
+                formParams.Add("DocumentList", request.DocumentList); // form parameter
+            }
+
+            var response = this.apiInvoker.InvokeBinaryApi(
+                resourcePath,
+                "PUT",
+                null,
+                null,
+                formParams);
+
+            return response;
+        }
+
+        /// <summary>
         /// Apply a style to the document node.
         /// </summary>
         /// <param name="request">Request. <see cref="ApplyStyleToDocumentElementRequest" /></param>
@@ -512,9 +559,9 @@ namespace Aspose.Words.Cloud.Sdk
 
             var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "format", request.Format);
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "outPath", request.OutPath);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fileNameFieldValue", request.FileNameFieldValue);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsLocation", request.FontsLocation);
             if (request.Document != null) 
             {
@@ -663,9 +710,9 @@ namespace Aspose.Words.Cloud.Sdk
                         .Replace("&amp;", "&")
                         .Replace("/?", "?");
 
-            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fileName", request.FileName);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "folder", request.Folder);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "storage", request.Storage);
 
             var response = this.apiInvoker.InvokeApi(
                 resourcePath,
@@ -1783,6 +1830,49 @@ namespace Aspose.Words.Cloud.Sdk
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// Removes paragraph from section.
+        /// </summary>
+        /// <param name="request">Request. <see cref="DeleteParagraphOnlineRequest" /></param>
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream DeleteParagraphOnline(DeleteParagraphOnlineRequest request)
+        {
+            // verify the required parameter 'document' is set
+            if (request.Document == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling DeleteParagraphOnline");
+            }
+
+            // create path and map variables
+            var resourcePath = this.configuration.GetApiRootUrl() + "/words/online/{nodePath}/paragraphs/{index}";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "nodePath", request.NodePath);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "index", request.Index);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "loadEncoding", request.LoadEncoding);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destFileName", request.DestFileName);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "revisionAuthor", request.RevisionAuthor);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "revisionDateTime", request.RevisionDateTime);
+            if (request.Document != null) 
+            {
+                formParams.Add("document", this.apiInvoker.ToFileInfo(request.Document, "Document"));
+            }
+
+            var response = this.apiInvoker.InvokeBinaryApi(
+                resourcePath,
+                "DELETE",
+                null,
+                null,
+                formParams);
+
+            return response;
         }
 
         /// <summary>
@@ -3015,17 +3105,17 @@ namespace Aspose.Words.Cloud.Sdk
         /// Reads document field names.
         /// </summary>
         /// <param name="request">Request. <see cref="GetDocumentFieldNamesOnlineRequest" /></param>
-        /// <returns><see cref="FieldNamesResponse" /></returns>
-        public FieldNamesResponse GetDocumentFieldNamesOnline(GetDocumentFieldNamesOnlineRequest request)
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream GetDocumentFieldNamesOnline(GetDocumentFieldNamesOnlineRequest request)
         {
-            // verify the required parameter 'template' is set
-            if (request.Template == null) 
+            // verify the required parameter 'document' is set
+            if (request.Document == null) 
             {
-                throw new ApiException(400, "Missing required parameter 'template' when calling GetDocumentFieldNamesOnline");
+                throw new ApiException(400, "Missing required parameter 'document' when calling GetDocumentFieldNamesOnline");
             }
 
             // create path and map variables
-            var resourcePath = this.configuration.GetApiRootUrl() + "/words/mailMerge/FieldNames";
+            var resourcePath = this.configuration.GetApiRootUrl() + "/words/online/mailMerge/FieldNames";
             resourcePath = Regex
                         .Replace(resourcePath, "\\*", string.Empty)
                         .Replace("&amp;", "&")
@@ -3033,24 +3123,19 @@ namespace Aspose.Words.Cloud.Sdk
 
             var formParams = new Dictionary<string, object>();
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "useNonMergeFields", request.UseNonMergeFields);
-            if (request.Template != null) 
+            if (request.Document != null) 
             {
-                formParams.Add("template", this.apiInvoker.ToFileInfo(request.Template, "Template"));
+                formParams.Add("document", this.apiInvoker.ToFileInfo(request.Document, "Document"));
             }
 
-            var response = this.apiInvoker.InvokeApi(
+            var response = this.apiInvoker.InvokeBinaryApi(
                 resourcePath,
-                "PUT",
+                "GET",
                 null,
                 null,
                 formParams);
 
-            if (response != null)
-            {
-                return (FieldNamesResponse)SerializationHelper.Deserialize(response, typeof(FieldNamesResponse));
-            }
-
-            return null;
+            return response;
         }
 
         /// <summary>
@@ -3308,6 +3393,45 @@ namespace Aspose.Words.Cloud.Sdk
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// Reads document statistics.
+        /// </summary>
+        /// <param name="request">Request. <see cref="GetDocumentStatisticsOnlineRequest" /></param>
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream GetDocumentStatisticsOnline(GetDocumentStatisticsOnlineRequest request)
+        {
+            // verify the required parameter 'document' is set
+            if (request.Document == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling GetDocumentStatisticsOnline");
+            }
+
+            // create path and map variables
+            var resourcePath = this.configuration.GetApiRootUrl() + "/words/online/statistics";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "includeComments", request.IncludeComments);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "includeFootnotes", request.IncludeFootnotes);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "includeTextInShapes", request.IncludeTextInShapes);
+            if (request.Document != null) 
+            {
+                formParams.Add("document", this.apiInvoker.ToFileInfo(request.Document, "Document"));
+            }
+
+            var response = this.apiInvoker.InvokeBinaryApi(
+                resourcePath,
+                "GET",
+                null,
+                null,
+                formParams);
+
+            return response;
         }
 
         /// <summary>
@@ -4282,8 +4406,8 @@ namespace Aspose.Words.Cloud.Sdk
         /// This resource represents one of the paragraphs contained in the document.
         /// </summary>
         /// <param name="request">Request. <see cref="GetParagraphRequest" /></param>
-        /// <returns><see cref="ParagraphResponse" /></returns>
-        public ParagraphResponse GetParagraph(GetParagraphRequest request)
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream GetParagraph(GetParagraphRequest request)
         {
             // verify the required parameter 'name' is set
             if (request.Name == null) 
@@ -4306,19 +4430,14 @@ namespace Aspose.Words.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "loadEncoding", request.LoadEncoding);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
 
-            var response = this.apiInvoker.InvokeApi(
+            var response = this.apiInvoker.InvokeBinaryApi(
                 resourcePath,
                 "GET",
                 null,
                 null,
                 null);
 
-            if (response != null)
-            {
-                return (ParagraphResponse)SerializationHelper.Deserialize(response, typeof(ParagraphResponse));
-            }
-
-            return null;
+            return response;
         }
 
         /// <summary>
@@ -4492,11 +4611,51 @@ namespace Aspose.Words.Cloud.Sdk
         }
 
         /// <summary>
+        /// This resource represents one of the paragraphs contained in the document.
+        /// </summary>
+        /// <param name="request">Request. <see cref="GetParagraphOnlineRequest" /></param>
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream GetParagraphOnline(GetParagraphOnlineRequest request)
+        {
+            // verify the required parameter 'document' is set
+            if (request.Document == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling GetParagraphOnline");
+            }
+
+            // create path and map variables
+            var resourcePath = this.configuration.GetApiRootUrl() + "/words/online/{nodePath}/paragraphs/{index}";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "nodePath", request.NodePath);
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "index", request.Index);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "loadEncoding", request.LoadEncoding);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            if (request.Document != null) 
+            {
+                formParams.Add("document", this.apiInvoker.ToFileInfo(request.Document, "Document"));
+            }
+
+            var response = this.apiInvoker.InvokeBinaryApi(
+                resourcePath,
+                "GET",
+                null,
+                null,
+                formParams);
+
+            return response;
+        }
+
+        /// <summary>
         /// Returns a list of paragraphs that are contained in the document.
         /// </summary>
         /// <param name="request">Request. <see cref="GetParagraphsRequest" /></param>
-        /// <returns><see cref="ParagraphLinkCollectionResponse" /></returns>
-        public ParagraphLinkCollectionResponse GetParagraphs(GetParagraphsRequest request)
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream GetParagraphs(GetParagraphsRequest request)
         {
             // verify the required parameter 'name' is set
             if (request.Name == null) 
@@ -4518,27 +4677,61 @@ namespace Aspose.Words.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "loadEncoding", request.LoadEncoding);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
 
-            var response = this.apiInvoker.InvokeApi(
+            var response = this.apiInvoker.InvokeBinaryApi(
                 resourcePath,
                 "GET",
                 null,
                 null,
                 null);
 
-            if (response != null)
+            return response;
+        }
+
+        /// <summary>
+        /// Returns a list of paragraphs that are contained in the document.
+        /// </summary>
+        /// <param name="request">Request. <see cref="GetParagraphsOnlineRequest" /></param>
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream GetParagraphsOnline(GetParagraphsOnlineRequest request)
+        {
+            // verify the required parameter 'document' is set
+            if (request.Document == null) 
             {
-                return (ParagraphLinkCollectionResponse)SerializationHelper.Deserialize(response, typeof(ParagraphLinkCollectionResponse));
+                throw new ApiException(400, "Missing required parameter 'document' when calling GetParagraphsOnline");
             }
 
-            return null;
+            // create path and map variables
+            var resourcePath = this.configuration.GetApiRootUrl() + "/words/online/{nodePath}/paragraphs";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "nodePath", request.NodePath);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "loadEncoding", request.LoadEncoding);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            if (request.Document != null) 
+            {
+                formParams.Add("document", this.apiInvoker.ToFileInfo(request.Document, "Document"));
+            }
+
+            var response = this.apiInvoker.InvokeBinaryApi(
+                resourcePath,
+                "GET",
+                null,
+                null,
+                formParams);
+
+            return response;
         }
 
         /// <summary>
         /// Returns a list of paragraphs that are contained in the document.
         /// </summary>
         /// <param name="request">Request. <see cref="GetParagraphsWithoutNodePathRequest" /></param>
-        /// <returns><see cref="ParagraphLinkCollectionResponse" /></returns>
-        public ParagraphLinkCollectionResponse GetParagraphsWithoutNodePath(GetParagraphsWithoutNodePathRequest request)
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream GetParagraphsWithoutNodePath(GetParagraphsWithoutNodePathRequest request)
         {
             // verify the required parameter 'name' is set
             if (request.Name == null) 
@@ -4559,19 +4752,14 @@ namespace Aspose.Words.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "loadEncoding", request.LoadEncoding);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
 
-            var response = this.apiInvoker.InvokeApi(
+            var response = this.apiInvoker.InvokeBinaryApi(
                 resourcePath,
                 "GET",
                 null,
                 null,
                 null);
 
-            if (response != null)
-            {
-                return (ParagraphLinkCollectionResponse)SerializationHelper.Deserialize(response, typeof(ParagraphLinkCollectionResponse));
-            }
-
-            return null;
+            return response;
         }
 
         /// <summary>
@@ -4663,8 +4851,8 @@ namespace Aspose.Words.Cloud.Sdk
         /// This resource represents one of the paragraphs contained in the document.
         /// </summary>
         /// <param name="request">Request. <see cref="GetParagraphWithoutNodePathRequest" /></param>
-        /// <returns><see cref="ParagraphResponse" /></returns>
-        public ParagraphResponse GetParagraphWithoutNodePath(GetParagraphWithoutNodePathRequest request)
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream GetParagraphWithoutNodePath(GetParagraphWithoutNodePathRequest request)
         {
             // verify the required parameter 'name' is set
             if (request.Name == null) 
@@ -4686,19 +4874,14 @@ namespace Aspose.Words.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "loadEncoding", request.LoadEncoding);
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
 
-            var response = this.apiInvoker.InvokeApi(
+            var response = this.apiInvoker.InvokeBinaryApi(
                 resourcePath,
                 "GET",
                 null,
                 null,
                 null);
 
-            if (response != null)
-            {
-                return (ParagraphResponse)SerializationHelper.Deserialize(response, typeof(ParagraphResponse));
-            }
-
-            return null;
+            return response;
         }
 
         /// <summary>
@@ -6321,8 +6504,8 @@ namespace Aspose.Words.Cloud.Sdk
         /// Adds paragraph to document, returns added paragraph's data.
         /// </summary>
         /// <param name="request">Request. <see cref="InsertParagraphRequest" /></param>
-        /// <returns><see cref="ParagraphResponse" /></returns>
-        public ParagraphResponse InsertParagraph(InsertParagraphRequest request)
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream InsertParagraph(InsertParagraphRequest request)
         {
             // verify the required parameter 'name' is set
             if (request.Name == null) 
@@ -6355,27 +6538,76 @@ namespace Aspose.Words.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "insertBeforeNode", request.InsertBeforeNode);
             var postBody = SerializationHelper.Serialize(request.Paragraph); // http body (model) parameter
 
-            var response = this.apiInvoker.InvokeApi(
+            var response = this.apiInvoker.InvokeBinaryApi(
                 resourcePath,
                 "POST",
                 postBody,
                 null,
                 null);
 
-            if (response != null)
+            return response;
+        }
+
+        /// <summary>
+        /// Adds paragraph to document, returns added paragraph's data.
+        /// </summary>
+        /// <param name="request">Request. <see cref="InsertParagraphOnlineRequest" /></param>
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream InsertParagraphOnline(InsertParagraphOnlineRequest request)
+        {
+            // verify the required parameter 'document' is set
+            if (request.Document == null) 
             {
-                return (ParagraphResponse)SerializationHelper.Deserialize(response, typeof(ParagraphResponse));
+                throw new ApiException(400, "Missing required parameter 'document' when calling InsertParagraphOnline");
             }
 
-            return null;
+            // verify the required parameter 'paragraph' is set
+            if (request.Paragraph == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'paragraph' when calling InsertParagraphOnline");
+            }
+
+            // create path and map variables
+            var resourcePath = this.configuration.GetApiRootUrl() + "/words/online/{nodePath}/paragraphs";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddPathParameter(resourcePath, "nodePath", request.NodePath);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "loadEncoding", request.LoadEncoding);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "password", request.Password);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "destFileName", request.DestFileName);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "revisionAuthor", request.RevisionAuthor);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "revisionDateTime", request.RevisionDateTime);
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "insertBeforeNode", request.InsertBeforeNode);
+            if (request.Document != null) 
+            {
+                formParams.Add("document", this.apiInvoker.ToFileInfo(request.Document, "Document"));
+            }
+
+            if (request.Paragraph != null) 
+            {
+                formParams.Add("Paragraph", request.Paragraph); // form parameter
+            }
+
+            var response = this.apiInvoker.InvokeBinaryApi(
+                resourcePath,
+                "POST",
+                null,
+                null,
+                formParams);
+
+            return response;
         }
 
         /// <summary>
         /// Adds paragraph to document, returns added paragraph's data.
         /// </summary>
         /// <param name="request">Request. <see cref="InsertParagraphWithoutNodePathRequest" /></param>
-        /// <returns><see cref="ParagraphResponse" /></returns>
-        public ParagraphResponse InsertParagraphWithoutNodePath(InsertParagraphWithoutNodePathRequest request)
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream InsertParagraphWithoutNodePath(InsertParagraphWithoutNodePathRequest request)
         {
             // verify the required parameter 'name' is set
             if (request.Name == null) 
@@ -6407,19 +6639,14 @@ namespace Aspose.Words.Cloud.Sdk
             resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "insertBeforeNode", request.InsertBeforeNode);
             var postBody = SerializationHelper.Serialize(request.Paragraph); // http body (model) parameter
 
-            var response = this.apiInvoker.InvokeApi(
+            var response = this.apiInvoker.InvokeBinaryApi(
                 resourcePath,
                 "POST",
                 postBody,
                 null,
                 null);
 
-            if (response != null)
-            {
-                return (ParagraphResponse)SerializationHelper.Deserialize(response, typeof(ParagraphResponse));
-            }
-
-            return null;
+            return response;
         }
 
         /// <summary>
@@ -7707,6 +7934,54 @@ namespace Aspose.Words.Cloud.Sdk
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// Converts document to destination format with detailed settings and saves result to storage.
+        /// </summary>
+        /// <param name="request">Request. <see cref="SaveAsOnlineRequest" /></param>
+        /// <returns><see cref="System.IO.Stream" /></returns>
+        public System.IO.Stream SaveAsOnline(SaveAsOnlineRequest request)
+        {
+            // verify the required parameter 'document' is set
+            if (request.Document == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'document' when calling SaveAsOnline");
+            }
+
+            // verify the required parameter 'saveOptionsData' is set
+            if (request.SaveOptionsData == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'saveOptionsData' when calling SaveAsOnline");
+            }
+
+            // create path and map variables
+            var resourcePath = this.configuration.GetApiRootUrl() + "/words/online/saveAs";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+
+            var formParams = new Dictionary<string, object>();
+            resourcePath = UrlHelper.AddQueryParameterToUrl(resourcePath, "fontsLocation", request.FontsLocation);
+            if (request.Document != null) 
+            {
+                formParams.Add("document", this.apiInvoker.ToFileInfo(request.Document, "Document"));
+            }
+
+            if (request.SaveOptionsData != null) 
+            {
+                formParams.Add("SaveOptionsData", request.SaveOptionsData); // form parameter
+            }
+
+            var response = this.apiInvoker.InvokeBinaryApi(
+                resourcePath,
+                "PUT",
+                null,
+                null,
+                formParams);
+
+            return response;
         }
 
         /// <summary>

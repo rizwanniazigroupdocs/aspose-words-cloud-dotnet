@@ -30,7 +30,7 @@ namespace Aspose.Words.Cloud.Sdk.Model.Requests
     /// <summary>
     /// Request model for <see cref="Aspose.Words.Cloud.Sdk.Api.WordsApi.DeleteParagraphTabStopWithoutNodePath" /> operation.
     /// </summary>
-    public class DeleteParagraphTabStopWithoutNodePathRequest : ICanModifyDocumentRequest, IWordDocumentRequest
+    public class DeleteParagraphTabStopWithoutNodePathRequest : IWordDocumentRequest, ICanModifyDocumentRequest
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DeleteParagraphTabStopWithoutNodePathRequest"/> class.

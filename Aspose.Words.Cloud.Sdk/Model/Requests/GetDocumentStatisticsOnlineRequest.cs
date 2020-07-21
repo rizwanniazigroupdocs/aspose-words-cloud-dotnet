@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="GetDocumentFieldNamesOnlineRequest.cs">
+// <copyright company="Aspose" file="GetDocumentStatisticsOnlineRequest.cs">
 //   Copyright (c) 2020 Aspose.Words for Cloud
 // </copyright>
 // <summary>
@@ -28,26 +28,30 @@ namespace Aspose.Words.Cloud.Sdk.Model.Requests
     using Aspose.Words.Cloud.Sdk.Model;
 
     /// <summary>
-    /// Request model for <see cref="Aspose.Words.Cloud.Sdk.Api.WordsApi.GetDocumentFieldNamesOnline" /> operation.
+    /// Request model for <see cref="Aspose.Words.Cloud.Sdk.Api.WordsApi.GetDocumentStatisticsOnline" /> operation.
     /// </summary>
-    public class GetDocumentFieldNamesOnlineRequest
+    public class GetDocumentStatisticsOnlineRequest
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetDocumentFieldNamesOnlineRequest"/> class.
+        /// Initializes a new instance of the <see cref="GetDocumentStatisticsOnlineRequest"/> class.
         /// </summary>        
-        public GetDocumentFieldNamesOnlineRequest()
+        public GetDocumentStatisticsOnlineRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetDocumentFieldNamesOnlineRequest"/> class.
+        /// Initializes a new instance of the <see cref="GetDocumentStatisticsOnlineRequest"/> class.
         /// </summary>
         /// <param name="document">The document.</param>
-        /// <param name="useNonMergeFields">If true, result includes "mustache" field names.</param>
-        public GetDocumentFieldNamesOnlineRequest(System.IO.Stream document, bool? useNonMergeFields = null)
+        /// <param name="includeComments">Support including/excluding comments from the WordCount. Default value is "false".</param>
+        /// <param name="includeFootnotes">Support including/excluding footnotes from the WordCount. Default value is "false".</param>
+        /// <param name="includeTextInShapes">Support including/excluding shape's text from the WordCount. Default value is "false".</param>
+        public GetDocumentStatisticsOnlineRequest(System.IO.Stream document, bool? includeComments = null, bool? includeFootnotes = null, bool? includeTextInShapes = null)
         {
             this.Document = document;
-            this.UseNonMergeFields = useNonMergeFields;
+            this.IncludeComments = includeComments;
+            this.IncludeFootnotes = includeFootnotes;
+            this.IncludeTextInShapes = includeTextInShapes;
         }
 
         /// <summary>
@@ -56,8 +60,18 @@ namespace Aspose.Words.Cloud.Sdk.Model.Requests
         public System.IO.Stream Document { get; set; }
 
         /// <summary>
-        /// If true, result includes "mustache" field names.
+        /// Support including/excluding comments from the WordCount. Default value is "false".
         /// </summary>
-        public bool? UseNonMergeFields { get; set; }
+        public bool? IncludeComments { get; set; }
+
+        /// <summary>
+        /// Support including/excluding footnotes from the WordCount. Default value is "false".
+        /// </summary>
+        public bool? IncludeFootnotes { get; set; }
+
+        /// <summary>
+        /// Support including/excluding shape's text from the WordCount. Default value is "false".
+        /// </summary>
+        public bool? IncludeTextInShapes { get; set; }
     }
 }

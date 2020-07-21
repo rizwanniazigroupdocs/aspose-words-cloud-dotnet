@@ -69,6 +69,21 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Api.Paragraph
         }
 
         /// <summary>
+        /// Test for getting paragraph online.
+        /// </summary>
+        [Test]
+        public void TestGetDocumentParagraphOnline()
+        {
+            var request = new GetParagraphOnlineRequest(
+                document: File.OpenRead(LocalTestDataFolder + localFile),
+                nodePath: "sections/0",
+                index: 0
+            );
+
+            var actual = this.WordsApi.GetParagraphOnline(request);
+        }
+
+        /// <summary>
         /// Test for getting paragraph without node path.
         /// </summary>
         [Test]
@@ -114,6 +129,20 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Api.Paragraph
             );
 
             var actual = this.WordsApi.GetParagraphs(request);
+        }
+
+        /// <summary>
+        /// Test for getting all paragraphs online.
+        /// </summary>
+        [Test]
+        public void TestGetDocumentParagraphsOnline()
+        {
+            var request = new GetParagraphsOnlineRequest(
+                document: File.OpenRead(LocalTestDataFolder + localFile),
+                nodePath: "sections/0"
+            );
+
+            var actual = this.WordsApi.GetParagraphsOnline(request);
         }
 
         /// <summary>
@@ -269,6 +298,24 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Api.Paragraph
             );
 
             var actual = this.WordsApi.InsertParagraph(request);
+        }
+
+        /// <summary>
+        /// Test for adding paragraph online.
+        /// </summary>
+        [Test]
+        public void TestInsertParagraphOnline()
+        {
+            var request = new InsertParagraphOnlineRequest(
+                document: File.OpenRead(LocalTestDataFolder + localFile),
+                paragraph: new ParagraphInsert()
+                {
+                    Text = "This is a new paragraph for your document"
+                },
+                nodePath: "sections/0"
+            );
+
+            var actual = this.WordsApi.InsertParagraphOnline(request);
         }
 
         /// <summary>
@@ -450,6 +497,21 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Api.Paragraph
             );
 
             this.WordsApi.DeleteParagraph(request);
+        }
+
+        /// <summary>
+        /// Test for deleting  a paragraph online.
+        /// </summary>
+        [Test]
+        public void TestDeleteParagraphOnline()
+        {
+            var request = new DeleteParagraphOnlineRequest(
+                document: File.OpenRead(LocalTestDataFolder + localFile),
+                nodePath: "",
+                index: 0
+            );
+
+            var actual = this.WordsApi.DeleteParagraphOnline(request);
         }
 
         /// <summary>

@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="CreateDocumentRequest.cs">
+// <copyright company="Aspose" file="AppendDocumentOnlineRequest.cs">
 //   Copyright (c) 2020 Aspose.Words for Cloud
 // </copyright>
 // <summary>
@@ -28,43 +28,36 @@ namespace Aspose.Words.Cloud.Sdk.Model.Requests
     using Aspose.Words.Cloud.Sdk.Model;
 
     /// <summary>
-    /// Request model for <see cref="Aspose.Words.Cloud.Sdk.Api.WordsApi.CreateDocument" /> operation.
+    /// Request model for <see cref="Aspose.Words.Cloud.Sdk.Api.WordsApi.AppendDocumentOnline" /> operation.
     /// </summary>
-    public class CreateDocumentRequest
+    public class AppendDocumentOnlineRequest
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateDocumentRequest"/> class.
+        /// Initializes a new instance of the <see cref="AppendDocumentOnlineRequest"/> class.
         /// </summary>        
-        public CreateDocumentRequest()
+        public AppendDocumentOnlineRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateDocumentRequest"/> class.
+        /// Initializes a new instance of the <see cref="AppendDocumentOnlineRequest"/> class.
         /// </summary>
-        /// <param name="fileName">The document name.</param>
-        /// <param name="folder">The document folder.</param>
-        /// <param name="storage">Original document storage.</param>
-        public CreateDocumentRequest(string fileName = null, string folder = null, string storage = null)
+        /// <param name="document">The document.</param>
+        /// <param name="documentList"><see cref="DocumentEntryList"/> with a list of documents to append.</param>
+        public AppendDocumentOnlineRequest(System.IO.Stream document, DocumentEntryList documentList)
         {
-            this.FileName = fileName;
-            this.Folder = folder;
-            this.Storage = storage;
+            this.Document = document;
+            this.DocumentList = documentList;
         }
 
         /// <summary>
-        /// The document name.
+        /// The document.
         /// </summary>
-        public string FileName { get; set; }
+        public System.IO.Stream Document { get; set; }
 
         /// <summary>
-        /// The document folder.
+        /// <see cref="DocumentEntryList"/> with a list of documents to append.
         /// </summary>
-        public string Folder { get; set; }
-
-        /// <summary>
-        /// Original document storage.
-        /// </summary>
-        public string Storage { get; set; }
+        public DocumentEntryList DocumentList { get; set; }
     }
 }

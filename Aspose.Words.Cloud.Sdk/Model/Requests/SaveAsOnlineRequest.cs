@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ConvertDocumentRequest.cs">
+// <copyright company="Aspose" file="SaveAsOnlineRequest.cs">
 //   Copyright (c) 2020 Aspose.Words for Cloud
 // </copyright>
 // <summary>
@@ -28,60 +28,39 @@ namespace Aspose.Words.Cloud.Sdk.Model.Requests
     using Aspose.Words.Cloud.Sdk.Model;
 
     /// <summary>
-    /// Request model for <see cref="Aspose.Words.Cloud.Sdk.Api.WordsApi.ConvertDocument" /> operation.
+    /// Request model for <see cref="Aspose.Words.Cloud.Sdk.Api.WordsApi.SaveAsOnline" /> operation.
     /// </summary>
-    public class ConvertDocumentRequest : ICanUseCustomFontsRequest, ICanSpecifyOutputFormatRequest
+    public class SaveAsOnlineRequest : ICanUseCustomFontsRequest
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConvertDocumentRequest"/> class.
+        /// Initializes a new instance of the <see cref="SaveAsOnlineRequest"/> class.
         /// </summary>        
-        public ConvertDocumentRequest()
+        public SaveAsOnlineRequest()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConvertDocumentRequest"/> class.
+        /// Initializes a new instance of the <see cref="SaveAsOnlineRequest"/> class.
         /// </summary>
-        /// <param name="document">Converting document.</param>
-        /// <param name="format">Format to convert.</param>
-        /// <param name="outPath">Path for saving operation result to the local storage.</param>
-        /// <param name="fileNameFieldValue">This file name will be used when resulting document has dynamic field for document file name {filename}. If it is not set, "sourceFilename" will be used instead.</param>
-        /// <param name="storage">Original document storage.</param>
+        /// <param name="document">The document.</param>
+        /// <param name="saveOptionsData">Save options.</param>
         /// <param name="fontsLocation">Folder in filestorage with custom fonts.</param>
-        public ConvertDocumentRequest(System.IO.Stream document, string format, string outPath = null, string fileNameFieldValue = null, string storage = null, string fontsLocation = null)
+        public SaveAsOnlineRequest(System.IO.Stream document, SaveOptionsData saveOptionsData, string fontsLocation = null)
         {
             this.Document = document;
-            this.Format = format;
-            this.OutPath = outPath;
-            this.FileNameFieldValue = fileNameFieldValue;
-            this.Storage = storage;
+            this.SaveOptionsData = saveOptionsData;
             this.FontsLocation = fontsLocation;
         }
 
         /// <summary>
-        /// Converting document.
+        /// The document.
         /// </summary>
         public System.IO.Stream Document { get; set; }
 
         /// <summary>
-        /// Format to convert.
+        /// Save options.
         /// </summary>
-        public string Format { get; set; }
-
-        /// <summary>
-        /// Path for saving operation result to the local storage.
-        /// </summary>
-        public string OutPath { get; set; }
-
-        /// <summary>
-        /// This file name will be used when resulting document has dynamic field for document file name {filename}. If it is not set, "sourceFilename" will be used instead.
-        /// </summary>
-        public string FileNameFieldValue { get; set; }
-
-        /// <summary>
-        /// Original document storage.
-        /// </summary>
-        public string Storage { get; set; }
+        public SaveOptionsData SaveOptionsData { get; set; }
 
         /// <summary>
         /// Folder in filestorage with custom fonts.
