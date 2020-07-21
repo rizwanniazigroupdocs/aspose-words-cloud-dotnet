@@ -82,6 +82,15 @@ namespace Aspose.Words.Cloud.Sdk.Tests.Api.Document
         [Test]
         public void TestAppendDocumentOnline()
         {
+            string remoteFileName = "TestAppendDocument.docx";
+
+            this.UploadFileToStorage(
+                remoteDataFolder + "/" + remoteFileName,
+                null,
+                null,
+                File.ReadAllBytes(LocalTestDataFolder + localFile)
+            );
+
             var request = new AppendDocumentOnlineRequest(
                 document: File.OpenRead(LocalTestDataFolder + localFile),
                 documentList: new DocumentEntryList()
