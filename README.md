@@ -73,8 +73,8 @@ The complete source code is available at [GitHub Repository](https://github.com/
                 ClientId = clientId,
                 ClientSecret = clientSecret,
                 ApiBaseUrl = baseUrl,
-            };
 
+            };
             var wordsApi = new WordsApi(config);
             using (var inputStream = new FileStream(pathToDocFile, FileMode.Open))
             {
@@ -89,4 +89,10 @@ The complete source code is available at [GitHub Repository](https://github.com/
             // End README example
 ```
 
+## GroupDocs.Viewer Cloud SDKs in Popular Languages
+
+| .NET | Java | PHP | Python | Ruby | Node.js | Android |
+|---|---|---|---|---|---|---|
+| [GitHub](https://github.com/aspose.words-cloud/aspose.words-cloud-dotnet) | [GitHub](https://github.com/aspose.words-cloud/aspose.words-cloud-java) | [GitHub](https://github.com/aspose.words-cloud/aspose.words-cloud-php) | [GitHub](https://github.com/aspose.words-cloud/aspose.words-cloud-python) | [GitHub](https://github.com/aspose.words-cloud/aspose.words-cloud-ruby)  | [GitHub](https://github.com/aspose.words-cloud/aspose.words-cloud-node) | [GitHub](https://github.com/aspose.words-cloud/aspose.words-cloud-android) |
 [Product Page](https://products.aspose.cloud/words/net) | [Documentation](https://docs.aspose.cloud/display/wordscloud/Home) | [API Reference](https://apireference.aspose.cloud/words/) | [Code Samples](https://github.com/aspose-words-cloud/aspose-words-cloud-dotnet) | [Blog](https://blog.aspose.cloud/category/words/) | [Free Support](https://forum.aspose.cloud/c/words) | [Free Trial](https://dashboard.aspose.cloud/#/apps)
+| [NuGet](https://www.nuget.org/packages/Aspose.Words-Cloud/) | [Maven](https://repository.aspose.words/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose.words-cloud) | [Composer](https://packagist.org/packages/asposecloud/aspose.words-cloud) | [PIP](https://pypi.org/project/aspose.words-cloud/) | [GEM](https://rubygems.org/gems/groupdocs_viewer_cloud)  | [NPM](https://www.npmjs.com/package/groupdocs-viewer-cloud) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-viewer-cloud-android) | 
