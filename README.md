@@ -2,13 +2,13 @@
 
 Cloud SDK for .Net wraps Aspose.Words REST API so you could seamlessly integrate Microsoft Word® document generation, manipulation, conversion & inspection features into your own .Net applications.
 
-# Word Document Processing in the Cloud
+# .NET SDK for Word Documents Processing in the Cloud
 
 [Aspose.Words Cloud SDK for .Net](https://products.aspose.cloud/words/net) allows to work with document headers, footers, page numbering, tables, sections, document comments, drawing objects, FormFields, fonts, hyperlinks, ranges, paragraphs, math objects, watermarks, track changes and document protection. It also assists in appending documents, splitting documents as well as converting document to other supported file formats. 
 
 Feel free to explore the [Developer's Guide](https://docs.aspose.cloud/display/wordscloud/Developer+Guide) & [API Reference](https://apireference.aspose.cloud/words/) to know all about Aspose.Words Cloud API. 
 
-## Document Processing Features
+## Document Processing Services in REST
 
 - Convert between various document-related formats, including Word to PDF & vice versa.
 - Mail merge and report generation in the Cloud.
@@ -18,81 +18,7 @@ Feel free to explore the [Developer's Guide](https://docs.aspose.cloud/display/w
 - Add & remove watermarks and protection.
 - Read & write access to Document Object Model.
 
-## Enhancements in Version 20.11
-
-- In configuration json file appSid / appKey has been replaced to clientId / clientSecret.
-- In Words API initialization methods clientId parameter precedes clientSecret parameter.
-
-
-## Enhancements in Version 20.10
-
-- Internal API changes.
-
-
-## Enhancements in Version 20.9
-
-- Added Batch API feature
-
-
-## Enhancements in Version 20.8
-
-- Added new api method (PUT '/words/{name}/compatibility/optimize') which is allows to optimize the document contents as well as default Aspose.Words behavior to a particular versions of MS Word
-- Added 'ApplyBaseDocumentHeadersAndFootersToAppendingDocuments' option to 'DocumentEntryList' for AppendDocument API
-- WithoutNodePath methods have been removed, pass null values instead
-
-
-## Enhancements in Version 20.7
-
-- Added 'Markdown' save format
-- Added endpoint to update paragraph format without node path (PUT '/words/{name}/paragraphs/{index}/format')
-
-
-## Enhancements in Version 20.6
-
-- Added new methods:
-  - DeleteAllParagraphTabStopsWithoutNodePath
-  - DeleteParagraphTabStopWithoutNodePath
-  - GetParagraphTabStopsWithoutNodePath
-  - InsertOrUpdateParagraphTabStopWithoutNodePath
-  - InsertParagraphWithoutNodePath
-  - UpdateParagraphFormatWithoutNodePath
-  - UpdateParagraphListFormatWithoutNodePath
-  - DeleteParagraphListFormatWithoutNodePath
-- DrawingObject related methods have been changed body content. Special request classes are introduced instead of strings.
-- InsertOrUpdateParagraphTabStop, DeleteParagraphTabStop methods have been changed parameter order
-- OoxmlSaveOptionsData.CompressionLevel property has been added
-
-
-## Enhancements in Version 20.5
-
-- Added methods to work with Word document lists
-  - GetLists
-  - GetList
-  - InsertList
-  - UpdateList
-  - UpdateListLevel
-- Added methods to work with styles
-  - GetStyles
-  - UpdateStyle
-  - InsertStyle
-  - CopyStyle
-  - GetStyleFromDocumentElement
-  - ApplyStyleToDocumentElement
-- Added methods to work with paragraph list format
-  - GetParagraphListFormat
-  - GetParagraphListFormatWithoutNodePath
-  - UpdateParagraphListFormat
-  - DeleteParagraphListFormat
-- Added methods to work with paragraph tab stops
-  - GetParagraphTabStops
-  - InsertOrUpdateParagraphTabStop
-  - DeleteAllParagraphTabStops
-  - DeleteParagraphTabStop
-- Added methods to build reports
-  - BuildReport
-  - BuildReportOnline
-- Added Shading property to ParagraphFormat
-
+Check out the [Developer's Guide](https://docs.aspose.cloud/display/wordscloud/Developer+Guide) to know more about Aspose Words Cloud REST API.
 
 ## Read & Write Document Formats
 
@@ -109,9 +35,9 @@ Feel free to explore the [Developer's Guide](https://docs.aspose.cloud/display/w
 **Images:** JPEG, PNG, BMP, SVG, TIFF, EMF
 **Others:** PCL
 
-## Getting Started with Aspose.Words Cloud SDK for .Net
+## Getting Started with Aspose.Words Cloud SDK for .NET
+First create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/) and get your application information. Next,  execute `Install-Package Aspose.Words-Cloud` from Package Manager Console in Visual Studio to fetch & reference the SDK in your project. If you already have the package and wish to upgrade it, please execute `Update-Package Aspose.Words-Cloud` to get the latest version.
 
-Firstly, create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/#/apps) to get your application information and free quota to use the API. 
 
 #### Install Aspose.Words-Cloud via NuGet
 
