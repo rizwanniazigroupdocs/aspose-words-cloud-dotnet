@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/api-v4.0-lightgrey) ![Nuget](https://img.shields.io/nuget/v/Aspose.Words-Cloud/) ![Nuget](https://img.shields.io/nuget/dt/Aspose.Words-Cloud/) [![GitHub license](https://img.shields.io/github/license/aspose-words-cloud/aspose-words-cloud-dotnet)](https://github.com/aspose-words-cloud/aspose-words-cloud-dotnet/blob/master/LICENSE) 
+![](https://img.shields.io/badge/api-v4.0-lightgrey) ![Nuget](https://img.shields.io/nuget/v/Aspose.Words-Cloud) ![Nuget](https://img.shields.io/nuget/dt/Aspose.Words-Cloud) [![GitHub license](https://img.shields.io/github/license/aspose-words-cloud/aspose-words-cloud-dotnet)](https://github.com/aspose-words-cloud/aspose-words-cloud-dotnet/blob/master/LICENSE)
 
 # .NET SDK for Word Documents Processing in the Cloud
 
