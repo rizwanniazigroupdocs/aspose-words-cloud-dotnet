@@ -18,6 +18,21 @@ Feel free to explore the [Developer's Guide](https://docs.aspose.cloud/display/w
 
 Check out the [Developer's Guide](https://docs.aspose.cloud/display/wordscloud/Developer+Guide) to know more about Aspose Words Cloud REST API.
 
+## Read & Write Document Formats
+
+**Microsoft Word:** DOC, DOCX, RTF, DOT, DOTX, DOTM, FlatOPC (XML)
+**OpenOffice:** ODT, OTT
+**WordprocessingML:** XML
+**Web:** HTML, MHTML, HtmlFixed
+**Text:** TXT
+**Fixed Layout:** PDF
+
+## Save Document As
+
+**Fixed Layout:** PDF/A, XPS, OpenXPS, PS
+**Images:** JPEG, PNG, BMP, SVG, TIFF, EMF
+**Others:** PCL
+
 ## Enhancements in Version 20.11
 
 - In configuration json file appSid / appKey has been replaced to clientId / clientSecret.
@@ -45,21 +60,6 @@ Check out the [Developer's Guide](https://docs.aspose.cloud/display/wordscloud/D
 
 - Added 'Markdown' save format
 - Added endpoint to update paragraph format without node path (PUT '/words/{name}/paragraphs/{index}/format')
-
-## Read & Write Document Formats
-
-**Microsoft Word:** DOC, DOCX, RTF, DOT, DOTX, DOTM, FlatOPC (XML)
-**OpenOffice:** ODT, OTT
-**WordprocessingML:** XML
-**Web:** HTML, MHTML, HtmlFixed
-**Text:** TXT
-**Fixed Layout:** PDF
-
-## Save Document As
-
-**Fixed Layout:** PDF/A, XPS, OpenXPS, PS
-**Images:** JPEG, PNG, BMP, SVG, TIFF, EMF
-**Others:** PCL
 
 ## Getting Started with Aspose.Words Cloud SDK for .NET
 First create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/) and get your application information. Next,  execute `Install-Package Aspose.Words-Cloud` from Package Manager Console in Visual Studio to fetch & reference the SDK in your project. If you already have the package and wish to upgrade it, please execute `Update-Package Aspose.Words-Cloud` to get the latest version.
